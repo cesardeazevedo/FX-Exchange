@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Building javascript"
-cd public/jsdev
+cd jsdev
 
 echo "default theme"
 sh build_release.sh en_US default

@@ -10,7 +10,8 @@ var paths = {
     };
 
 gulp.task('harp-build', function(done){
-    return cp.exec('harp compile public _site', { stdio: 'inherit'}).on('close', done);
+    cp.exec('harp compile . _site', { stdio: 'inherit'}).on('close', done);
+    cp.exec('rm -r _site/.git');
 });
 
 gulp.task('harp-rebuild', ['harp-build'], function(){
