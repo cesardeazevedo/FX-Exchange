@@ -1,0 +1,124 @@
+
+<% body_classes = 'ws-not-connected bitex-not-logged active-view-start'%>
+<% load_application = true %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+    <meta charset="utf-8">
+    <% var t%>
+    <% var lang = languages[0] %>
+    <% if (exchange  == 'chilebit'){  %>
+        <title><%= public.en_US._data.exchanges.chilebit.title %></title>
+    <% } if (exchange  == 'surbitcoin'){  %>
+        <title><%= public.en_US._data.exchanges.surbitcoin.title %></title>
+    <% } if (exchange == 'demo') { %>
+            <% t = public.en_US._data %>
+        <title><%= t.exchanges.demo.title %></title>
+    <% } %>
+    <!-- Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="<%= author %>">
+
+    <% if (exchange  == 'chilebit'){  %>
+        <meta name="description" content="<%= t.exchanges.chilebit.description %>">
+        <meta name="keywords" content="<%= t.exchanges.chilebit.keywords %>">
+        <meta property="og:title" content="<%= t.exchanges.chilebit.title %>">
+        <meta property="og:description" content="<%= t.exchanges.chilebit.description %>">
+    <% } if (exchange  == 'surbitcoin'){  %>
+        <meta name="description" content="<%= t.exchanges.surbitcoin.description %>">
+        <meta name="keywords" content="<%= t.exchanges.surbitcoin.keywords %>">
+        <meta property="og:title" content="<%= t.exchanges.surbitcoin.title %>">
+        <meta property="og:description" content="<%= t.exchanges.surbitcoin.description %>">
+    <% } if (exchange == 'demo') { %>
+        <meta name="description" content="<%= t.exchanges.demo.description %>">
+        <meta name="keywords" content="<%= t.exchanges.demo.keywords %>">
+        <meta property="og:title" content="<%= t.exchanges.demo.title %>">
+        <meta property="og:description" content="<%= t.exchanges.demo.description %>">
+    <% } %>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%= url %><%= baseurl %>/themes/FX-Exchange/">
+    <meta property="og:image" content="<%= url %><%= baseurl %>/assets/exchange_logos/<%= exchange_logo %>_social_network_share.png">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="<%= baseurl %>/assets/exchange_logos/<%= exchange_logo %>_favicon.ico">
+    <link rel="icon" href="<%= baseurl %>/assets/exchange_logos/<%= exchange_logo %>_favicon.ico" type="image/x-icon">
+
+    <!-- Feed -->
+    <link rel="alternate" type="application/rss+xml" href="<%= url %><%= baseurl %>/feed.xml">
+
+    <meta charset="utf-8">
+
+    <link rel="canonical" href="<%= url %><%= baseurl %>"/>
+    <script type="text/rocketscript" data-rocketsrc="//apis.google.com/js/plusone.js"></script>
+
+    <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/font-awesome.min.css" rel="stylesheet">
+
+    <% if (load_application) { %>
+    <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/Dialog.css" rel="stylesheet">
+    <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/fuelux.css" rel="stylesheet">
+    <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/default.uni-form.css" rel="stylesheet">
+    <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/style.css?v=<%= deploy_version %>" rel="stylesheet">
+    <script data-cfasync="false" src="<%= baseurl %>/assets/js/bitex_app_blink_trade.compiled.en_US.default.js?v=<%- deploy_version %>" type="text/javascript"></script>
+    <% } %>
+  </head>
+  <body class="<% if (body_classes) { %><%= body_classes %> <% } %>"/>
+    <div id="id_toolbar" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+        <% if (load_application) { %>
+          <a href="#" class="brand" data-switch-view="offerbook">
+              <img data-switch-view="offerbook" src="<%= baseurl %>/assets/exchange_logos/<%= exchange_logo %>_toolbar_logo.png" style="
+                height: 30px;
+                margin-top: -10px;
+                margin-bottom: -10px;
+            ">
+          </a>
+          <% } else { %>
+          <a class="brand" href="<%= baseurl %>/">
+              <img src="<%= baseurl %>/assets/exchange_logos/<%= exchange_logo %>_toolbar_logo.png" style="
+                height: 30px;
+                margin-top: -10px;
+                margin-bottom: -10px;
+            ">
+          </a>
+          <% } %>
+
+          <ul class="nav navbar-nav pull-right">
+            <% if (load_application) { %>
+            <li><a href="" data-switch-view="faq"><%= t.views.toolbar.faq %></a></li>
+            <li class="bitex-display-if-logged"><a href="" data-switch-view="offerbook"><%= t.views.toolbar.trading %></a></li>
+            <li><a href="" data-switch-view="market"><%= t.views.toolbar.market %></a></li>
+            <li class="bitex-hide-if-logged"><a href="" data-switch-view="signin"><%= t.views.toolbar.signin %></a></li>
+            <li class="bitex-hide-if-logged"><a href="" data-switch-view="signup"><%= t.views.toolbar.signup %></a></li>
+            <% } %>
+
+            <li class="dropdown">
+            <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><%= lang %> <b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <% languages.forEach(function(l) { %>
+                <% if  (lang != 'lang') { %>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= baseurl %>/"><%= l %></a></li>
+                  <% } %>
+                <% }) %>
+              </ul>
+            </li>
+
+            <% if (load_application) { %>
+            <li>
+              <button id="id_button_connect_ws" class="bitex-hide-if-ws-connected btn-link"
+                  style="padding: 6px 15px 10px;"><%= t.views.toolbar.connect %> <i class="icon-white icon-repeat"></i></button>
+            </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix" style=""></div>
+
+    <div id="id_notifications" class="notifications top-right" style="z-index: 9000;"></div>
+
+
