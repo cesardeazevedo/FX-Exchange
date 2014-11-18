@@ -9,9 +9,11 @@
       <!-- translate variable -->
       <% var t%>
       <% if (exchange  == 'chilebit'){  %>
+            <% t = public.es._data %>
             <%= public.en_US._data.exchanges.chilebit.lead  %>
       <% } %>
       <% if (exchange  == 'surbitcoin'){  %>
+            <% t = public.es._data %>
             <%= public.en_US._data.exchanges.surbitcoin.lead  %>
       <% } %>
       <% if (exchange == 'demo') { %>
@@ -21,6 +23,8 @@
       </p>
     </header>
     
+    <% lang = "en_US" %>
+    <% t = public.en_US._data %>
     <div class="bitex-view-content">
       <div class="row bitex-hide-if-logged bitex-view-content" style="text-align: center;">
         <form action="" class="form-inline">

@@ -3,8 +3,9 @@
         "url": "https://testnet.blinktrade.com",
         "author": "BlinkTrade",
         "baseurl": "",
+        "url": "http://localhost:3001",
         "deploy_version": "3e74480",
-        "exchange": "demo",
+        "exchange": "surbitcoin",
         "exchange_logo": "demo",
         "default_country_code": "US",
         "blinktrade_broker_id": 5,
@@ -13,6 +14,7 @@
         "zopim_key": "2SSNIzvxy8fBypKoZJ0pI43tUoNCv8os",
         "markdown": "kramdown",
         "load_application": true,
+        "lang": "en_US",
         "languages": [
             "en_US",
             "us",

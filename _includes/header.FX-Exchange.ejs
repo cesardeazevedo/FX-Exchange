@@ -6,15 +6,19 @@
   <head>
     <meta charset="utf-8">
     <% var t%>
-    <% var lang = languages[0] %>
+    <% t = (lang == "en_US") ?
+        public.en_US._data : (lang == "es") ?
+        public.es._data    : (lang == "pt_BR") ?
+        public.pt_BR._data : public.en_US._data
+    %>
     <% if (exchange  == 'chilebit'){  %>
         <title><%= public.en_US._data.exchanges.chilebit.title %></title>
     <% } if (exchange  == 'surbitcoin'){  %>
         <title><%= public.en_US._data.exchanges.surbitcoin.title %></title>
     <% } if (exchange == 'demo') { %>
-            <% t = public.en_US._data %>
         <title><%= t.exchanges.demo.title %></title>
     <% } %>
+    
     <!-- Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="<%= author %>">
@@ -100,7 +104,7 @@
             <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
                 <% languages.forEach(function(l) { %>
                 <% if  (lang != 'lang') { %>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= baseurl %>/"><%= l %></a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" class="languages" href="#<%=l %>"><%= l %></a></li>
                   <% } %>
                 <% }) %>
               </ul>
