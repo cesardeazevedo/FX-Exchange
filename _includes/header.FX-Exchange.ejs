@@ -6,15 +6,23 @@
   <head>
     <meta charset="utf-8">
     <% var t%>
-    <% t = (lang == "en_US") ?
-        public.en_US._data : (lang == "es") ?
-        public.es._data    : (lang == "pt_BR") ?
-        public.pt_BR._data : public.en_US._data
+    <%  
+    if(current.path.length == 0) {
+        t = (lang == "en_US") ?
+            public.en_US._data : (lang == "es") ?
+            public.es._data    : (lang == "pt_BR") ?
+            public.pt_BR._data : public.en_US._data
+    } else {
+        t = (current.path[0] == "en_US") ?
+            public.en_US._data : (current.path[0] == "es") ?
+            public.es._data    : (current.path[0] == "pt_BR") ?
+            public.pt_BR._data : public.en_US._data
+    }
     %>
     <% if (exchange  == 'chilebit'){  %>
-        <title><%= public.en_US._data.exchanges.chilebit.title %></title>
+        <title><%= t.exchanges.chilebit.title %></title>
     <% } if (exchange  == 'surbitcoin'){  %>
-        <title><%= public.en_US._data.exchanges.surbitcoin.title %></title>
+        <title><%= t.exchanges.surbitcoin.title %></title>
     <% } if (exchange == 'demo') { %>
         <title><%= t.exchanges.demo.title %></title>
     <% } %>
@@ -102,9 +110,9 @@
             <li class="dropdown">
             <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><%= lang %> <b class="caret"></b></a>
             <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-                <% languages.forEach(function(l) { %>
+                <% languages.forEach(function(_lang) { %>
                 <% if  (lang != 'lang') { %>
-                <li role="presentation"><a role="menuitem" tabindex="-1" class="languages" href="#<%=l %>"><%= l %></a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" class="languages" href="<%= url %>/<%=_lang%>" ><%= _lang %></a></li>
                   <% } %>
                 <% }) %>
               </ul>
