@@ -8,23 +8,31 @@
       <p class="lead bitex-view-title bitex-view-title">
       <!-- translate variable -->
       <% var t%>
+        <%  
+        if(current.path.length == 0) {
+            t = (lang == "en_US") ?
+                public.en_US._data : (lang == "es") ?
+                public.es._data    : (lang == "pt_BR") ?
+                public.pt_BR._data : public.en_US._data
+        } else {
+            t = (current.path[0] == "en_US") ?
+                public.en_US._data : (current.path[0] == "es") ?
+                public.es._data    : (current.path[0] == "pt_BR") ?
+                public.pt_BR._data : public.en_US._data
+        }
+        %>
       <% if (exchange  == 'chilebit'){  %>
-            <% t = public.es._data %>
             <%= public.en_US._data.exchanges.chilebit.lead  %>
       <% } %>
       <% if (exchange  == 'surbitcoin'){  %>
-            <% t = public.es._data %>
             <%= public.en_US._data.exchanges.surbitcoin.lead  %>
       <% } %>
       <% if (exchange == 'demo') { %>
-            <% t = public.en_US._data %>
             <%= public.en_US._data.exchanges.demo.lead  %>
       <% } %>
       </p>
     </header>
     
-    <% lang = "en_US" %>
-    <% t = public.en_US._data %>
     <div class="bitex-view-content">
       <div class="row bitex-hide-if-logged bitex-view-content" style="text-align: center;">
         <form action="" class="form-inline">
