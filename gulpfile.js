@@ -4,9 +4,11 @@ var gulp        = require('gulp'),
     cp          = require('child_process');
 
 var paths = {
-        'stylus' : 'assets/themes/FX-Exchange/**/*.styl',
-        'css'    : 'assets/themes/FX-Exchange/css/**.css',
-        'html'   : ['**/*.ejs']
+        'sass'    : 'assets/themes/FX-Exchange/**/*.sass', // Sass files
+        'css'     : 'assets/themes/FX-Exchange/css/**.css',
+        'cssDir'  : 'assets/themes/FX-Exchange/css',
+        'cssDest' : '_site/assets/themes/FX-Exchange/css',
+        'html'    : ['**/*.ejs']
     };
 
 gulp.task('harp-build', function(done){
@@ -16,6 +18,12 @@ gulp.task('harp-build', function(done){
 
 gulp.task('harp-rebuild', ['harp-build'], function(){
     browserSync.reload();
+});
+
+gulp.task('harp-sass', function(){
+	cp.exec('harp compile ' + paths.cssDir + ' ' + paths.cssDest, function(){
+		browserSync.reload("blinktrade.css", { stream: true});
+	});
 });
 
 gulp.task("browser-sync", ['harp-rebuild' ], function() {
@@ -30,8 +38,9 @@ gulp.task("browser-sync", ['harp-rebuild' ], function() {
     });
 });
 
+//Watch your Sass, Less, Stylus files and will be compiled by HarpJS
 gulp.task('watch', function(){
-    gulp.watch([paths.stylus], ['harp-rebuild'] );
+    gulp.watch([paths.sass], ['harp-sass'] );
     gulp.watch([paths.html, paths.css], ['harp-rebuild']);
 });
 
