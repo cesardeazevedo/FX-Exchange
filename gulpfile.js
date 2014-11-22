@@ -4,35 +4,41 @@ var gulp        = require('gulp'),
     cp          = require('child_process');
 
 var paths = {
-        'stylus' : 'assets/themes/FX-Exchange/**/*.styl',
-        'css'    : 'assets/themes/FX-Exchange/css/**.css',
-        'html'   : ['**/*.ejs']
+        'stylus'  : 'assets/themes/FX-Exchange/**/*.styl',
+        'html'    : ['**/*.ejs'],
     };
 
 gulp.task('harp-build', function(done){
     cp.exec('harp compile . _site', { stdio: 'inherit'}).on('close', done);
-    cp.exec('rm -r _site/.git');
 });
 
-gulp.task('harp-rebuild', ['harp-build'], function(){
-    browserSync.reload();
+/*
+ * reload when stylus files was changed
+ */
+gulp.task('harp-stylus', function(){
+        browserSync.reload('blinktrade.css', { stream: true });
 });
 
-gulp.task("browser-sync", ['harp-rebuild' ], function() {
+gulp.task('harp-html', function(){
+        browserSync.reload('index.html', { stream : true });
+});
+
+gulp.task("browser-sync", function() {
     harp.server(__dirname, {
         port: 3000
     }, function() {
         browserSync({
-            server : {
-                baseDir: '_site'
-            }
+            proxy: "localhost:3000",
+            open: true
         });
     });
 });
 
 gulp.task('watch', function(){
-    gulp.watch([paths.stylus], ['harp-rebuild'] );
-    gulp.watch([paths.html, paths.css], ['harp-rebuild']);
+    gulp.watch([ paths.stylus ], ['harp-stylus']);
+    gulp.watch([ paths.html   ], ['harp-html']);
 });
 
 gulp.task('default', [ 'browser-sync', 'watch' ]);
+
+gulp.task('build', ['harp-build']);
