@@ -138,6 +138,12 @@
                 <% }) %>
               </ul>
             </li>
+            <li class="bitex-display-if-logged">
+                <a href="javascript:location.reload()">
+                    <span class="glyphicon glyphicon-log-out primary-color"></span>
+                    <%= t.views.sidebar.logout %>
+                </a>
+            </li>
 
             <% if (load_application) { %>
             <li>

@@ -11,7 +11,7 @@
   <!-- landing page-->
 
   <!-- Start -->
-  <div id="start" class="page  row-fluid bitex-view bitex-view-admin">
+  <div id="start" class="row-fluid bitex-view bitex-view-admin">
         <!-- col-md-8 -->
         <div class="col-md-8">
             <header class="logoHome">
@@ -48,6 +48,11 @@
                         <a href="" class="btn btn-success btn-large" data-switch-view="signup"><%= t.views.start.signup %></a>
                     </span>
                 </div>
+                <script>
+                    setInterval(function(){
+                    console.log("<%= current.path[0] %>");
+                    },2000);
+                </script>
                 <!-- row-fluid -->
             </header>
         </div>
@@ -69,12 +74,18 @@
                             <table>
                                 <tr>
                                     <td>
-                                        <input class="focus form-control" id="id_landing_username" placeholder="username" size="30" type="text">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><%= t.views.signup.username %></span>
+                                            <input class="focus form-control" id="id_landing_username" placeholder="" size="30" type="text">
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input id="id_landing_password" placeholder="password" size="30"  type="password" class="form-control">
+                                        <div class="input-group">
+                                            <span class="input-group-addon" style="padding-right: 14px"><%= t.views.signup.password %></span>
+                                            <input id="id_landing_password" placeholder="" size="30" type="password" class="form-control">
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -192,7 +203,7 @@
         <div class="control-group" style="display: none;">
           <label class="control-label"><%= t.views.signup.broker %></label>
           <div class="controls">
-            <select id="id_signup_broker" name="broker"></select>
+            <select class="form-control" id="id_signup_broker" name="broker"></select>
           </div>
         </div>
         <div class="control-group">
@@ -222,30 +233,34 @@
   <!-- signin page-->
   <div id="signin" class="page  row-fluid bitex-view">
     <div class="page-header">
-      <h1 class="bitex-view-title"><%= t.views.signin.title %></h1>
-    </div>
-    <p><%= t.views.signin.dont_have_an_account %> <a href="#" data-switch-view="signup"><%= t.views.signin.signup %></a></p>
-
+      <h1 class="bitex-view-title thin-100"><%= t.views.signin.title %></h1>
+    <label><%= t.views.signin.dont_have_an_account %> <a href="#" data-switch-view="signup"><%= t.views.signin.signup %></a></label>
+    <hr />
     <div class="bitex-view-content">
       <form accept-charset="UTF-8" action="" method="post">
-        <div class="clearfix">
-          <label for="id_username"><%= t.views.signin.username %></label>
+        <div class="">
+          <!-- <label for="id_username"><%= t.views.signin.username %></label> -->
 
-          <div class="input">
+          <div class="input-group">
+            <span class="input-group-addon"><%= t.views.signin.username %></span>
             <input autocapitalize="off" autocorrect="off" class="form-control" id="id_username" name="username" type="text" placeholder=""></div>
         </div>
+        <br />
         <div class="clearfix">
-          <label for="id_password"><%= t.views.signin.password %></label>
-          <div class="input">
+          <!-- <label for="id_password"><%= t.views.signin.password %></label> -->
+          <div class="input-group">
+            <span class="input-group-addon" style="padding-right:14px"><%= t.views.signin.password %></span>
             <input id="id_password" class="form-control" placeholder="" name="password" type="password">
           </div>
         </div>
+        <br />
         <p><a href="#" data-switch-view="forgot_password"><%= t.views.signin.forgot_your_password %></a></p>
-
+        <br />
         <div class="actions">
           <input id="id_btn_login" class="btn btn-primary" name="commit" type="submit" value="<%= t.views.signin.login_button_label %>">
         </div>
       </form>
+    </div>
     </div>
   </div>
 
@@ -306,8 +321,8 @@
     </div>
   </div>
 
-  <div class="page row-fluid bitex-display-if-logged">
-      <div id="id_sidebar">
+  <div class="bitex-display-if-logged">
+  <div id="id_sidebar" class="account-header ">
 
       <h1><span class="bitex-model bitex-view-title" data-model-key="DisplayName"></span>
       <small> (<span class="bitex-model bitex-view-title" data-model-key="PseudoName"></span>)</small></h1>
@@ -316,7 +331,7 @@
 
           <form class="form-inline">
             <label class="control-label" for="id_instrument_1"><%= t.views.sidebar.market %></label>
-            <select id="id_instrument_1">
+            <select class="form-control" id="id_instrument_1">
               <option></option>
             </select>
           </form>
@@ -326,86 +341,80 @@
 
         </div>
     </div>
-      <div class="menuFull">
-        <div class="menu">
-        
-            <ul class="nav navbar-nav pull-right">
-            <li style="">
-                <a href="" data-switch-view="profile">
-                <span data-switch-view="profile" class="glyphicon glyphicon-user primary-color"></span>
-                <%= t.views.sidebar.my_profile %></a>
-            </li>
-            <li style="">
-                <a href="" data-switch-view="my_broker">
-                <span data-switch-view="my_broker" class="glyphicon glyphicon-user primary-color"></span>
-                <%= t.views.sidebar.my_broker %></a></li>
+    <div class="menu">
+    
+        <ul class="nav navbar-nav">
+        <li style="">
+            <a href="" data-switch-view="profile">
+            <span data-switch-view="profile" class="glyphicon glyphicon-user primary-color"></span>
+            <%= t.views.sidebar.my_profile %></a>
+        </li>
+        <li style="">
+            <a href="" data-switch-view="my_broker">
+            <span data-switch-view="my_broker" class="glyphicon glyphicon-copyright-mark primary-color"></span>
+            <%= t.views.sidebar.my_broker %></a></li>
 
-            <li>
-                <a href="" data-switch-view="trading">
-                <span data-switch-view="trading" class="glyphicon glyphicon-transfer primary-color"></span>
-                <%= t.views.sidebar.trading %></a>
-            </li>
+        <li>
+            <a href="" data-switch-view="trading">
+            <span data-switch-view="trading" class="glyphicon glyphicon-transfer primary-color"></span>
+            <%= t.views.sidebar.trading %></a>
+        </li>
 
-            <li>
-                <a href="" data-switch-view="offerbook">
-                <span data-switch-view="offerbook" class="glyphicon glyphicon-book primary-color"></span>
-                <%= t.views.sidebar.offerbook %></a>
-            </li>
+        <li>
+            <a href="" data-switch-view="offerbook">
+            <span data-switch-view="offerbook" class="glyphicon glyphicon-book primary-color"></span>
+            <%= t.views.sidebar.offerbook %></a>
+        </li>
 
-            <li style="">
-                <a href="" data-switch-view="ledger">
-                <span data-switch-view="ledger" class="glyphicon glyphicon-th-list primary-color"></span>
-                <%= t.views.sidebar.ledger %></a>
-            </li>
+        <li style="">
+            <a href="" data-switch-view="ledger">
+            <span data-switch-view="ledger" class="glyphicon glyphicon-th-list primary-color"></span>
+            <%= t.views.sidebar.ledger %></a>
+        </li>
 
-            <li style="" class="bitex-display-if-broker">
-                <a href="" data-switch-view="customers">
-                <%= t.views.sidebar.customers %></a>
-            </li>
+        <li style="" class="bitex-display-if-broker">
+            <a href="" data-switch-view="customers">
+            <%= t.views.sidebar.customers %></a>
+        </li>
 
-            <li style="" class="bitex-display-if-broker">
-                <a href="" data-switch-view="deposit_requests">
-                <span data-switch-view="deposit_requests" class="glyphicon glyphicon-inbox primary-color"></span>
-                <%= t.views.sidebar.deposit_requests %></a>
-            </li>
+        <li style="" class="bitex-display-if-broker">
+            <a href="" data-switch-view="deposit_requests">
+            <span data-switch-view="deposit_requests" class="glyphicon glyphicon-inbox primary-color"></span>
+            <%= t.views.sidebar.deposit_requests %></a>
+        </li>
 
-            <li style="" class="bitex-display-if-broker">
-                <a href="" data-switch-view="withdraw_requests">
-                <%= t.views.sidebar.withdraw_requests %></a>
-            </li>
+        <li style="" class="bitex-display-if-broker">
+            <a href="" data-switch-view="withdraw_requests">
+            <%= t.views.sidebar.withdraw_requests %></a>
+        </li>
 
-            <li style="">
-                <a href="" data-switch-view="deposit">
-                <span data-switch-view="deposit" class="glyphicon glyphicon-inbox primary-color"></span>
-                <%= t.views.sidebar.deposit %></a>
-            </li>
+        <li style="">
+            <a href="" data-switch-view="deposit">
+            <span data-switch-view="deposit" class="glyphicon glyphicon-inbox primary-color"></span>
+            <%= t.views.sidebar.deposit %></a>
+        </li>
 
-            <li style="">
-                <a href="" data-switch-view="withdraw">
-                <span data-switch-view="withdraw" class="glyphicon glyphicon-pencil primary-color"></span>
-                    <%= t.views.sidebar.withdraw %></a>
-            </li>
+        <li style="">
+            <a href="" data-switch-view="withdraw">
+            <span data-switch-view="withdraw" class="glyphicon glyphicon-pencil primary-color"></span>
+                <%= t.views.sidebar.withdraw %></a>
+        </li>
 
-            <li style="" class="bitex-display-if-non-broker" id="verification_menu_id">
-            <a href="" data-switch-view="verification">
-                <span data-switch-view="verification" class="glyphicon glyphicon-pencil primary-color"></span>
-                <%= t.views.sidebar.verification %></a>
-            </li>
+        <li style="" class="bitex-display-if-non-broker" id="verification_menu_id">
+        <a href="" data-switch-view="verification">
+            <span data-switch-view="verification" class="glyphicon glyphicon-pencil primary-color"></span>
+            <%= t.views.sidebar.verification %></a>
+        </li>
 
-            <li style="">
-                <a href="" data-switch-view="faq">
-                <span data-switch-view="faq" class="glyphicon glyphicon-info-sign primary-color"></span>
-                <%=t.views.sidebar.support %></a>
-            </li>
-
-            <li>
-                <a href="javascript:location.reload()">
-                <span class="glyphicon glyphicon-log-out primary-color"></span>
-                <%= t.views.sidebar.logout %></a>
-            </li>
-            </ul>
-        </div></div>
-        <br />
+        <li style="">
+            <a href="" data-switch-view="faq">
+            <span data-switch-view="faq" class="glyphicon glyphicon-info-sign primary-color"></span>
+            <%=t.views.sidebar.support %></a>
+        </li>
+        </ul>
+    </div>
+  </div>
+  <div class="page row-fluid bitex-display-if-logged" style="margin-top:-4px">
     <div class="span9">
       <div id="profile" class="bitex-view">
         <div class="section-title">
