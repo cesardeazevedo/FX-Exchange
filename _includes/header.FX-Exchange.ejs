@@ -2,7 +2,7 @@
 <% load_application = true %>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<html lang="<%= lang %>" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
   <head>
     <meta charset="utf-8">
     <% var t%>
@@ -26,7 +26,6 @@
     <% } if (exchange == 'demo') { %>
         <title><%= t.exchanges.demo.title %></title>
     <% } %>
-    
     <!-- Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="<%= author %>">
@@ -64,7 +63,8 @@
     <link rel="canonical" href="<%= url %><%= baseurl %>"/>
     <script type="text/rocketscript" data-rocketsrc="//apis.google.com/js/plusone.js"></script>
 
-    <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/bootstrap-combined.min.css" rel="stylesheet">
+    <!-- <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/bootstrap-combined.min.css" rel="stylesheet"> -->
+    <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/bootstrap.min.css" rel="stylesheet">
     <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/font-awesome.min.css" rel="stylesheet">
 
     <% if (load_application) { %>
@@ -72,43 +72,64 @@
     <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/fuelux.css" rel="stylesheet">
     <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/default.uni-form.css" rel="stylesheet">
     <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/style.css?v=<%= deploy_version %>" rel="stylesheet">
+    <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/blinktrade.css?" rel="stylesheet">
     <script data-cfasync="false" src="<%= baseurl %>/assets/js/bitex_app_blink_trade.compiled.en_US.default.js?v=<%- deploy_version %>" type="text/javascript"></script>
     <% } %>
   </head>
   <body class="<% if (body_classes) { %><%= body_classes %> <% } %>"/>
-    <div id="id_toolbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div id="id_toolbar" class="navbar navbar-default navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
 
         <% if (load_application) { %>
-          <a href="#" class="brand" data-switch-view="offerbook">
-              <img data-switch-view="offerbook" src="<%= baseurl %>/assets/exchange_logos/<%= exchange_logo %>_toolbar_logo.png" style="
-                height: 30px;
-                margin-top: -10px;
-                margin-bottom: -10px;
-            ">
+        <a href="<% if (load_application) {%> <%-url %> <% } else { %> <%- '#' %><% } %>" class="brand" data-switch-view="offerbook">
+              <img data-switch-view="offerbook" src="<%= baseurl %>/assets/exchange_logos/<%= exchange_logo %>_toolbar_logo_black.png" style="">
           </a>
           <% } else { %>
           <a class="brand" href="<%= baseurl %>/">
-              <img src="<%= baseurl %>/assets/exchange_logos/<%= exchange_logo %>_toolbar_logo.png" style="
-                height: 30px;
-                margin-top: -10px;
-                margin-bottom: -10px;
-            ">
+              <img src="<%= baseurl %>/assets/exchange_logos/<%= exchange_logo %>_toolbar_logo.png" style="display:none">
           </a>
           <% } %>
 
           <ul class="nav navbar-nav pull-right">
             <% if (load_application) { %>
-            <li><a href="" data-switch-view="faq"><%= t.views.toolbar.faq %></a></li>
-            <li class="bitex-display-if-logged"><a href="" data-switch-view="offerbook"><%= t.views.toolbar.trading %></a></li>
-            <li><a href="" data-switch-view="market"><%= t.views.toolbar.market %></a></li>
-            <li class="bitex-hide-if-logged"><a href="" data-switch-view="signin"><%= t.views.toolbar.signin %></a></li>
-            <li class="bitex-hide-if-logged"><a href="" data-switch-view="signup"><%= t.views.toolbar.signup %></a></li>
+            <li class="bitex-display-if-logged">
+                <a href="" data-switch-view="offerbook">
+                    <span data-switch-view="offerbook" class="glyphicon glyphicon-sort primary-color" aria-hidden="true"></span>
+                    <%= t.views.toolbar.trading %>
+                </a>
+            </li>
+            <li>
+                <a href="" data-switch-view="market">
+                    <i data-switch-view="market" class="glyphicon glyphicon-signal primary-color" aria-hidden="true"></i>
+                    <%= t.views.toolbar.market %>
+                </a>
+            </li>
+            <li class="bitex-hide-if-logged">
+                <a href="" data-switch-view="signin">
+                    <span data-switch-view="signin" class="glyphicon glyphicon-user primary-color" aria-hidden="true"></span>
+                    <%= t.views.toolbar.signin %>
+                </a>
+            </li>
+            <li class="bitex-hide-if-logged">
+                <a href="" data-switch-view="signup">
+                    <span data-switch-view="signup" class="glyphicon glyphicon-plus primary-color" aria-hidden="true"></span>
+                    <%= t.views.toolbar.signup %>
+                </a>
+            </li>
             <% } %>
+            <li>
+                <a href="" data-switch-view="faq">
+                    <span data-switch-view="faq" class="glyphicon glyphicon-question-sign primary-color" aria-hidden="true"></span>
+                    <%= t.views.toolbar.faq %>
+                </a>
+            </li>
 
             <li class="dropdown">
-            <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><%= lang %> <b class="caret"></b></a>
+            <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-globe primary-color" aria-hidden="true"></span>
+                <%= lang %> <b class="caret"></b>
+            </a>
             <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
                 <% languages.forEach(function(_lang) { %>
                 <% if  (lang != 'lang') { %>
@@ -129,7 +150,7 @@
       </div>
     </div>
 
-    <div class="clearfix" style="padding: 30px;"></div>
+    <div class="clearfix" ></div>
 
     <div id="id_notifications" class="notifications top-right" style="z-index: 9000;"></div>
 
