@@ -6,23 +6,9 @@ html, body {
   color: black;
 }
 
-body {
-  /* padding-bottom: 40px; */
-  font-size: 12px;
-}
-
-
-
 /* The white background content wrapper */
 .page {
   margin: 120px 0px; /* negative indent the amount of the padding to maintain the grid system */
-}
-
-/* Page header tweaks */
-.page-header {
-  background-color: #f5f5f5;
-  padding: 20px 20px 10px;
-  margin: -20px -20px 20px;
 }
 
 .section-title {
