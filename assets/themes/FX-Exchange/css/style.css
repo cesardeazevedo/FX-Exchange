@@ -6,11 +6,6 @@ html, body {
   color: black;
 }
 
-/* The white background content wrapper */
-.page {
-  margin: 120px 0px; /* negative indent the amount of the padding to maintain the grid system */
-}
-
 .section-title {
 }
 
