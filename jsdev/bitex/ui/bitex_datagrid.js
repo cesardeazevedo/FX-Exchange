@@ -472,13 +472,13 @@ bitex.ui.DataGrid.prototype.onChangeFilter_ = function(e) {
   var filter = goog.dom.forms.getValue(this.search_input_);
 
   if (goog.string.isEmpty(filter) && goog.isNull(this.filter_)) {
-    goog.dom.classes.addRemove( goog.dom.getFirstElementChild(this.search_btn_), 'icon-remove', 'icon-search'  );
+    goog.dom.classes.addRemove( goog.dom.getFirstElementChild(this.search_btn_), 'glyphicon-remove', 'glyphicon-search'  );
     return;
   }
   if (filter === this.filter_ && goog.isDefAndNotNull(this.filter_)  ) {
-    goog.dom.classes.addRemove( goog.dom.getFirstElementChild(this.search_btn_), 'icon-search', 'icon-remove' );
+    goog.dom.classes.addRemove( goog.dom.getFirstElementChild(this.search_btn_), 'glyphicon-search', 'glyphicon-remove' );
   } else{
-    goog.dom.classes.addRemove( goog.dom.getFirstElementChild(this.search_btn_), 'icon-remove', 'icon-search'  );
+    goog.dom.classes.addRemove( goog.dom.getFirstElementChild(this.search_btn_), 'glyphicon-remove', 'glyphicon-search'  );
   }
 };
 
@@ -495,12 +495,12 @@ bitex.ui.DataGrid.prototype.handleSearchBtnClick_ = function(e) {
   if (filter === this.filter_ && goog.isDefAndNotNull(this.filter_)  ) {
     this.filter_ = null;
     goog.dom.forms.setValue(this.search_input_, "");
-    goog.dom.classes.addRemove( goog.dom.getFirstElementChild(this.search_btn_), 'icon-remove', 'icon-search' );
+    goog.dom.classes.addRemove( goog.dom.getFirstElementChild(this.search_btn_), 'glyphicon-remove', 'glyphicon-search' );
     this.getModel().currentPage = 0;
     this.render_data_();
   } else {
     this.filter_ = filter;
-    goog.dom.classes.addRemove( goog.dom.getFirstElementChild(this.search_btn_), 'icon-search', 'icon-remove' );
+    goog.dom.classes.addRemove( goog.dom.getFirstElementChild(this.search_btn_), 'glyphicon-search', 'glyphicon-remove' );
     this.getModel().currentPage = 0;
     this.render_data_();
   }

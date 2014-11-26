@@ -15,19 +15,20 @@
       <thead>
         <tr>
           <th colspan="4" {if not $title and not $show_search}style="display: none;"{/if}>
-            <span class="datagrid-header-title"  {if not $title}style="display: none;"{/if} ><strong>{$title}</strong></span>
-
+            <span class="datagrid-header-title"  {if not $title}style="display: none;"{/if} ><h5>{$title}</h5></span>
             <div class="datagrid-header-left" {if not $show_search}style="display: none;"{/if}>
-                <div class="input-append search datagrid-search">
-                  <input type="text" class="input-medium form-control" placeholder="{$search_placeholder}">
-                  <button type="button" class="btn"><i class="glyphicon glyphicon-search"></i></button>
+                <div class="datagrid-search input-group">
+                  <input type="text" class="form-control" placeholder="{$search_placeholder}">
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                  </span>
                 </div>
             </div>
 
             <div class="datagrid-header-right">
               {if $button_filters}
                 <div class="select filter datagrid-filter" data-resize="auto">
-                  <button type="button" data-toggle="dropdown" class="btn dropdown-toggle">
+                  <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">
                     {foreach $button in $button_filters}
                       {if isFirst($button)}
                         <span class="dropdown-label" style="width: 111px;">{$button['label']}</span>

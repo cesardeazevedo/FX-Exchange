@@ -5,17 +5,21 @@
   * @param columns
   */
 {template .OrderBook}
-  <div class="text-center"><h4>{$title}</h4></div>
-  <table class="table">
-    <thead>
-      <tr>
-        {foreach $column in $columns}
-          <th>{$column}</th>
-        {/foreach}
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
+<div class="panel panel-default">
+  <div class="panel-heading thin-200"><h4 class="thin-300">{$title}</h4></div>
+  <div class="panel-body body-tables">
+    <table class="table">
+        <thead>
+        <tr>
+            {foreach $column in $columns}
+            <th>{$column}</th>
+            {/foreach}
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+  </div>
+</div>
 {/template}
 

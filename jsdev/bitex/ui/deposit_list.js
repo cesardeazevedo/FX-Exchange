@@ -253,14 +253,14 @@ bitex.ui.DepositList = function( crypto_currencies_def, opt_broker_mode, opt_sho
           'class':'btn btn-mini btn-info btn-deposit-view',
           'href': opt_rest_url + '/get_deposit?deposit_id=' + rowSet['DepositID'],
           'target':'_blank'
-        },MSG_DEPOSIT_TABLE_DETAILS_COLUMN_BTN_VIEW,' ' ,goog.dom.createDom( 'i', ['icon-white', 'icon-eye-open']));
+        },MSG_DEPOSIT_TABLE_DETAILS_COLUMN_BTN_VIEW,' ' ,goog.dom.createDom( 'i', ['glyphicon', ' glyphicon-eye-open']));
 
         var btn_qr = goog.dom.createDom( 'a', {
           'class':'btn btn-mini btn-info btn-deposit-view-qr',
           'href':'#',
           'data-action':'SHOW_QR',
           'data-row': data_row
-        },MSG_DEPOSIT_TABLE_DETAILS_COLUMN_BTN_QR,' ' , goog.dom.createDom( 'i', ['icon-white', 'icon-qrcode']));
+        },MSG_DEPOSIT_TABLE_DETAILS_COLUMN_BTN_QR,' ' , goog.dom.createDom( 'i', ['glyphicon', 'glyphicon-qrcode']));
 
 
         switch (rowSet['Type'] ) {
@@ -340,27 +340,27 @@ bitex.ui.DepositList = function( crypto_currencies_def, opt_broker_mode, opt_sho
           'href':'#',
           'data-action':'CANCEL',
           'data-row': data_row
-        },MSG_DEPOSIT_TABLE_DETAILS_COLUMN_BTN_CANCEL,' ', goog.dom.createDom( 'i', ['icon-white', 'icon-remove']));
+        },MSG_DEPOSIT_TABLE_DETAILS_COLUMN_BTN_CANCEL,' ', goog.dom.createDom( 'i', ['glyphicon', 'icon-remove']));
 
         var btn_progress = goog.dom.createDom( 'a', {
           'class':'btn btn-mini btn-info btn-deposit-progress',
           'href':'#',
           'data-action':'PROGRESS',
           'data-row': data_row
-        },MSG_DEPOSIT_TABLE_COLUMN_ACTION_PROGRESS,' ', goog.dom.createDom( 'i', ['icon-white', 'icon-refresh']));
+        },MSG_DEPOSIT_TABLE_COLUMN_ACTION_PROGRESS,' ', goog.dom.createDom( 'i', ['glyphicon', 'icon-refresh']));
 
         var btn_complete = goog.dom.createDom( 'a', {
           'class':'btn btn-mini btn-success btn-deposit-complete',
           'href':'#',
           'data-action':'COMPLETE',
           'data-row': data_row
-        },MSG_DEPOSIT_TABLE_COLUMN_ACTION_COMPLETE,' ', goog.dom.createDom( 'i', ['icon-white', 'icon-ok']));
+        },MSG_DEPOSIT_TABLE_COLUMN_ACTION_COMPLETE,' ', goog.dom.createDom( 'i', ['glyphicon', 'icon-ok']));
 
         var btn_show_receipt_broker = goog.dom.createDom( 'a', {
           'class':'btn btn-mini btn-success btn-deposit-show-receipt',
           'data-action':'SHOW_RECEIPT',
           'data-row': data_row
-        }, goog.dom.createDom( 'i', ['icon-white', 'icon-file']));
+        }, goog.dom.createDom( 'i', ['glyphicon', 'glyphicon-file']));
 
         switch (rowSet['Type'] ) {
           case 'CRY':
@@ -413,13 +413,13 @@ bitex.ui.DepositList = function( crypto_currencies_def, opt_broker_mode, opt_sho
           'class':'btn btn-mini btn-success btn-deposit-upload',
           'data-action':'UPLOAD',
           'data-row': data_row
-        },MSG_DEPOSIT_TABLE_DETAILS_COLUMN_BTN_UPLOAD, ' ' ,goog.dom.createDom( 'i', ['icon-white', 'icon-file']));
+        },MSG_DEPOSIT_TABLE_DETAILS_COLUMN_BTN_UPLOAD, ' ' ,goog.dom.createDom( 'i', ['glyphicon', 'glyphicon-file']));
 
         var btn_show_receipt = goog.dom.createDom( 'a', {
           'class':'btn btn-mini btn-success btn-deposit-show-receipt',
           'data-action':'SHOW_RECEIPT',
           'data-row': data_row
-        }, goog.dom.createDom( 'i', ['icon-white', 'icon-file']));
+        }, goog.dom.createDom( 'i', ['glyphicon', 'glyphicon-file']));
 
 
         switch (rowSet['Type'] ) {
