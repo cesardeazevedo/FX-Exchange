@@ -24,11 +24,12 @@
       <div class="span5"> <span>{msg desc="Amount label in Advanced Order Entry"}Amount:{/msg}</span>
       </div>
       <div class="span6">
-        <div class="input-prepend input-block-level"><span id="{$id}_amount_sign" class="add-on advanced-order-entry-amount-sign">{$amount_currency_symbol}</span>
+        <div class="input-prepend input-block-level input-group">
+          <span id="{$id}_amount_sign" class="input-group-addon add-on advanced-order-entry-amount-sign">{$amount_currency_symbol}</span>
           <input id="{$id}_amount"
                  name="amount"
                  type="text"
-                 class="input-block-level"
+                 class="input-block-level form-control"
                  data-uniform-label="{msg desc="Advanced Order Entry Label"}Amount{/msg}"
                  data-uniform-validators="validateNumber; required"
                  data-uniform-filters="positive_number"
@@ -40,11 +41,12 @@
     <div class="row-fluid uniform-control-holder">
       <div class="span5"> <span>{msg desc="'Price per label' in Order Entry"}Price per {/msg}<span class="advanced-order-entry-amount-sign">{$amount_currency_symbol}</span>:</span></div>
       <div class="span6">
-        <div class="input-prepend input-block-level"><span id="{$id}_price_sign" class="add-on advanced-order-entry-price-sign">{$price_currency_symbol}</span>
+        <div class="input-prepend input-block-level input-group">
+          <span id="{$id}_price_sign" class="input-group-addon add-on advanced-order-entry-price-sign">{$price_currency_symbol}</span>
           <input id="{$id}_price"
                  name="price"
                  type="text"
-                 class="input-block-level"
+                 class="input-block-level form-control"
                  data-uniform-label="{msg desc="Advanced Order Entry Label"}Price{/msg}"
                  data-uniform-validators="validateNumber; required"
                  data-uniform-filters="positive_number"
@@ -56,11 +58,12 @@
       <div class="span5"><span>{msg desc="Total label in Order Entry"}Total:{/msg}</span>
       </div>
       <div class="span6">
-        <div class="input-prepend input-block-level"><span class="add-on advanced-order-entry-price-sign">{$price_currency_symbol}</span>
+        <div class="input-prepend input-block-level input-group">
+        <span class="input-group-addon add-on advanced-order-entry-price-sign">{$price_currency_symbol}</span>
           <input id="{$id}_total"
                  name="total"
                  type="text"
-                 class="input-block-level"
+                 class="input-block-level form-control"
                  data-uniform-label="{msg desc="Advanced Order Entry Label"}Total{/msg}"
                  data-uniform-validators="validateNumber; required"
                  data-uniform-filters="positive_number"
@@ -74,7 +77,7 @@
               name="client_id"
               type="text"
               value="{if $client_id}{$client_id}{/if}"
-              class="input-block-level"
+              class="input-block-level form-control"
               label="{msg desc="Client ID label in Order Entry"}Client ID{/msg}"
               data-uniform-label="{msg desc="Advanced Order Entry Label"}Client ID{/msg}"
               {if $is_broker}
@@ -85,6 +88,7 @@
               {/if}
         />
       </div>
+      <br />
       <div class="span5">
         <button id="{$id}_action" class="btn {if $side == 1}btn-success{else}btn-danger{/if} btn-execution">
           {if $side == 1}

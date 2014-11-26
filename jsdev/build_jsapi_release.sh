@@ -18,6 +18,8 @@ python ./closure-library/closure/bin/build/closurebuilder.py  \
   --compiler_flags="--externs=./externs/parsley.js" \
   --compiler_flags="--externs=./externs/sticky.js" \
   --compiler_flags="--externs=./externs/facebook_javascript_sdk.js" \
+  --compiler_flags="--externs=./externs/StackBlur.js" \
+  --compiler_flags="--externs=./externs/html2canvas.js" \
   --compiler_flags="--translations_project='bitex'" \
    > ../assets/js/bitex.compiled.en_US.js
 
