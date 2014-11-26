@@ -2,7 +2,7 @@
     "globals": {
         "url": "https://testnet.blinktrade.com",
         "author": "BlinkTrade",
-        "baseurl": "FX-Exchange",
+        "baseurl": "/FX-Exchange",
         "url": "http://localhost:3001",
         "deploy_version": "3e74480",
         "exchange": "surbitcoin",
