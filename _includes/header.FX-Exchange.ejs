@@ -135,7 +135,7 @@
             <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
                 <% languages.forEach(function(_lang) { %>
                 <% if  (lang != 'lang') { %>
-                <li role="presentation"><a role="menuitem" tabindex="-1" class="languages" href="/<%=_lang%>" ><%= _lang %></a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" class="languages" href="<%= baseurl %>/<%=_lang%>" ><%= _lang %></a></li>
                   <% } %>
                 <% }) %>
               </ul>
