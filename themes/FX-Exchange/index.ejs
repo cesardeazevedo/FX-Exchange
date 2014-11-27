@@ -65,14 +65,11 @@
                     <form action="">
                         <!-- loginBox -->
                         <div class="loginBox">
-                            <div class="BlurLogin">
-                                <div class=""></div>
-                            </div>
                             <table>
                                 <tr>
                                     <td>
                                         <div class="input-group">
-                                            <span class="input-group-addon"><%= t.views.signup.username %></span>
+                                            <span class="input-group-addon addon-field <%= current.path[0] %>"><%= t.views.signup.username %></span>
                                             <input class="focus form-control" id="id_landing_username" placeholder="" size="30" type="text">
                                         </div>
                                     </td>
@@ -80,7 +77,7 @@
                                 <tr>
                                     <td>
                                         <div class="input-group">
-                                            <span class="input-group-addon" style="padding-right: 14px"><%= t.views.signup.password %></span>
+                                            <span class="input-group-addon addon-field <%= current.path[0] %>"><%= t.views.signup.password %></span>
                                             <input id="id_landing_password" placeholder="" size="30" type="password" class="form-control">
                                         </div>
                                     </td>
@@ -119,7 +116,7 @@
           <br />
 
           <div class="input-group">
-            <span class="input-group-addon" style="padding-right:36px"><%= t.views.signup.username %></span>
+            <span class="input-group-addon addon-field"><%= t.views.signup.username %></span>
             <input id="id_signup_username" class="form-control" name="Username" size="30" type="text" placeholder="">
           </div>
         </div>
@@ -129,7 +126,7 @@
           <br />
 
           <div class="input-group">
-            <span class="input-group-addon"><%= t.views.signup.email %></span>
+            <span class="input-group-addon addon-field"><%= t.views.signup.email %></span>
             <input id="id_signup_email" class="form-control" name="Email" size="30" type="text" placeholder="<%= t.views.signup.email_placeholder %>">
           </div>
         </div>
@@ -139,7 +136,7 @@
           <br />
 
           <div class="input-group">
-              <span class="input-group-addon" style="padding-right:38px"><%= t.views.signup.password %></span>
+              <span class="input-group-addon addon-field"><%= t.views.signup.password %></span>
             <input id="id_signup_password" class="form-control" name="Password" size="30" type="password">
               <span class="input-group-addon help-block"><%= t.views.signup.password_help %></span>
           </div>
@@ -149,7 +146,7 @@
           <!-- <label class="control-label"><%= t.views.signup.confirm_password %></label> -->
           <br />
           <div class="input-group">
-              <span class="input-group-addon"><%= t.views.signup.confirm_password %></span>
+              <span class="input-group-addon addon-field"><%= t.views.signup.confirm_password %></span>
             <input id="id_signup_password2" class="form-control" name="Password2" size="30" type="password">
           </div>
         </div>
@@ -209,14 +206,14 @@
           <!-- <label for="id_username"><%= t.views.signin.username %></label> -->
 
           <div class="input-group">
-            <span class="input-group-addon"><%= t.views.signin.username %></span>
+              <span class="input-group-addon addon-field <%= current.path[0] %>"><%= t.views.signin.username %></span>
             <input autocapitalize="off" autocorrect="off" class="form-control" id="id_username" name="username" type="text" placeholder=""></div>
         </div>
         <br />
         <div class="clearfix">
           <!-- <label for="id_password"><%= t.views.signin.password %></label> -->
           <div class="input-group">
-            <span class="input-group-addon" style="padding-right:14px"><%= t.views.signin.password %></span>
+              <span class="input-group-addon addon-field <%= current.path[0] %>"><%= t.views.signin.password %></span>
             <input id="id_password" class="form-control" placeholder="" name="password" type="password">
           </div>
         </div>
