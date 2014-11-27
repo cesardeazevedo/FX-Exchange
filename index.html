@@ -516,20 +516,28 @@
   <div class="page row-fluid bitex-display-if-logged" style="margin-top:-4px">
     <div class="span9">
       <div id="profile" class="bitex-view">
-        <div class="section-title">
-          <h3 class="bitex-view-title">My Profile</h3>
+        <div class="panel panel-default" style="margin-bottom:-2px">
+            <div class="section-title panel-heading">
+                <h2 class="bitex-view-title thin-200">
+                    <span class="glyphicon glyphicon-user"></span>
+                    My Profile
+                </h2>
+            </div>
         </div>
-        <div id="profile_content" class="bitex-view-content">
-          <div id="account_overview_user_id"></div>
+            <!-- <div class="panel-body"> -->
+                <div id="profile_content" class="bitex-view-content">
+                    <div id="account_overview_user_id"></div>
+                </div>
+            <!-- </div> -->
+        <hr />
+        <div class="panel panel-default">
+            <div class="section-title panel-heading">
+            <h3 class="bitex-view-title thin-200">Enable or Disable Two steps authentication</h3>
         </div>
-
-        <div class="section-title">
-          <h3 class="bitex-view-title">Enable or Disable Two steps authentication</h3>
-        </div>
-
+        <div class="panel-body">
         <div class="content bitex-view-content">
 
-          <div class="well span6">
+          <div class="">
             <div id="id_enable_two_factor_div" class="form-horizontal ">
 
               <div class="control-group">
@@ -561,6 +569,8 @@
             <button id="id_btn_enable_two_factor" class="btn btn-primary">Enable</button>
             <button id="id_btn_disable_two_factor" class="btn btn-danger">Disable</button>
           </div>
+        </div>
+        </div>
         </div>
       </div>
 
@@ -642,7 +652,7 @@
       </div>
 
       <div id="withdraw" class="bitex-view">
-        <div class="panel panel-default">
+        <div class="panel panel-default no-padding">
             <div class="section-title panel-heading">
                 <h2 class="bitex-view-title thin-200">
                     <span class="glyphicon glyphicon-send"></span>
@@ -676,7 +686,7 @@
       </div>
 
       <div id="deposit" class="bitex-view">
-        <div class="panel panel-default">
+        <div class="panel panel-default no-padding">
             <div class="section-title panel-heading">
                 <h2 class="bitex-view-title thin-200">
                     <span class="glyphicon glyphicon-inbox"></span>
