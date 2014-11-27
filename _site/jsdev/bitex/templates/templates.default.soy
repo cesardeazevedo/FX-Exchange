@@ -1109,7 +1109,9 @@
   * @param msg_customer_detail
   */
 {template .AccountOverviewHeader}
-  <table class="table table-striped table-condensed account-overview-table" style="width: 350px">
+  <div class="panel no-padding">
+  <div class="panel-body">
+  <table class="table account-overview-table">
     <tbody>
       <tr>
         <td><strong>{msg desc="label on overview header"}ID{/msg}</strong></td>
@@ -1167,6 +1169,8 @@
 
     </tbody>
   </table>
+</div>
+</div>
 {/template}
 
 
@@ -1174,7 +1178,9 @@
   * @param msg_customer_detail
   */
 {template .AccountOverviewUser}
-  <table class="table table-striped table-condensed account-overview-table" style="width: 350px">
+  <div class="panel no-padding">
+  <div class="panel-body">
+  <table class="table account-overview-table" >
     <tbody>
       <tr>
         <td><strong>{msg desc="label on overview header"}ID{/msg}</strong></td>
@@ -1217,6 +1223,8 @@
       </tr>
     </tbody>
   </table>
+</div>
+</div>
 {/template}
 
 
