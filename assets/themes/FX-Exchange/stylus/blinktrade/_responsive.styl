@@ -1,46 +1,121 @@
 // /* Large Devices, Wide Screens */
-@media (max-width: 1200px){
-}
-
-
-
-// /* Medium Devices, Desktops */
-@media (max-width: 992px)
+@media (min-width: 1200px)
+    .menu
+        ul
+            li
+                display table-cell
 
     #id_toolbar
-        height initial
+        display block!important
+        .container
+            padding-top 20px
+
+            .navbar-collapse
+                margin-bottom 10px
+
+@media(max-width: 1200px)
+    .menu
+        ul
+            display block!important
+            font-size 16px
+            font-weight 300
+            width 100%
+            li
+                width 100%
+
+    .account-header
+        margin-top 170px!important
+
+// /* Medium Devices, Desktops */
+@media (min-width: 992px)
+
 
     .loginBox
         width 100%!important
 
-        input
-            width 97%!important
+    .page
+        margin-top 170px
+
+
+    #id_toolbar
+        display block!important
+        .container
+            padding-top 20px
+
+            .navbar-collapse
+                margin-bottom 10px
+
+    #trading
+        .simple-order-entry
+            table
+                width 100%
+                td:nth-child(3)
+                    width 25%
+                td
+                    padding 10px
+                    button
+                        width 100%
+
+        div.datagrid
+            margin-top 20px!important
+
+
+@media(max-width: 992px)
+
+    #id_toolbar
+        display block!important
+        .container
+            display flex
+            flex-direction column
+            align-items center
+            padding-top 20px
+
+            .navbar-collapse
+                margin-top 20px
+                margin-bottom 10px
+
 
 // /* Small Devices, Tablets */
 @media (max-width: 768px)
 
-    .blur
-        width 100%
-
     .loginBox
         width 100%!important
 
-        input
-            width 97%!important
+    .account-header
+        margin-top 120px!important
 
     #id_toolbar
+        display block!important
+
         .container
-            text-align center
+            display block!important
+            padding-top 20px
+            .navbar-brand
+                img
+                    max-width 225px
+                    margin-top 5px
+
+    .logoHome
+        .lead
+            margin-top 0px!important
+
+
+    #my_broker
+        .table-wallet
+            table-layout fixed
+
+    .menu
         ul
-            float none
-            display inline-flex
+            width 100%
+            font-size 16px
+            font-weight 300
 
-// /* Custom, iPhone Retina */ 
-@media (max-width:  320px)
+@media(max-width: 768px)
 
-    .loginBox
-        width 100%!important
-
-        input
-            width 97%!important
-
+    .menu
+        ul
+            font-size 16px
+            font-weight 300
+            li
+                width 100%
+                margin-left 15px
