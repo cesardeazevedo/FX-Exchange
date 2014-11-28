@@ -218,7 +218,7 @@
         </h3>
       </div>
       <div class="panel-body">
-        <table class="table">
+        <table class="table table-wallet">
           <thead>
             <tr>
               <th>{msg desc="Coin  column on Broker wallet table"}Coin{/msg}</th>
@@ -234,7 +234,7 @@
                 <tr>
                   <td>{$crypto_currencies['CurrencyDescription']}</td>
                   <td>{$wallets['type'] }</td>
-                  <td>
+                  <td class="column-wrap">
                   {if $crypto_currencies['CurrencyCode'] == 'BTC' }
                     {switch $wallets['address'][0]}
                       {case 'm','n','2','9','c'}
