@@ -1,3 +1,17 @@
+//blocks
+trading =
+// #trading
+    .simple-order-entry
+        table
+            width 100%
+            td:nth-child(3)
+                width 25%
+            td
+                padding 6px
+                button
+                    width 100%
+
+
 // /* Large Devices, Wide Screens */
 @media (min-width: 1200px)
     .menu
@@ -16,7 +30,7 @@
 @media(max-width: 1200px)
     .menu
         ul
-            display block!important
+            display table-row!important
             font-size 16px
             font-weight 300
             width 100%
@@ -26,12 +40,11 @@
     .account-header
         margin-top 170px!important
 
+
 // /* Medium Devices, Desktops */
 @media (min-width: 992px)
 
 
-    .loginBox
-        width 100%!important
 
     .page
         margin-top 170px
@@ -46,21 +59,12 @@
                 margin-bottom 10px
 
     #trading
-        .simple-order-entry
-            table
-                width 100%
-                td:nth-child(3)
-                    width 25%
-                td
-                    padding 10px
-                    button
-                        width 100%
-
-        div.datagrid
-            margin-top 20px!important
-
+        {trading}
 
 @media(max-width: 992px)
+
+    .loginBox
+        width 100%!important
 
     #id_toolbar
         display block!important
@@ -74,6 +78,8 @@
                 margin-top 20px
                 margin-bottom 10px
 
+    #trading
+        {trading}
 
 // /* Small Devices, Tablets */
 @media (max-width: 768px)
@@ -97,25 +103,9 @@
 
     .logoHome
         .lead
-            margin-top 0px!important
-
+            margin-top 30px!important
 
     #my_broker
         .table-wallet
             table-layout fixed
 
-    .menu
-        ul
-            width 100%
-            font-size 16px
-            font-weight 300
-
-@media(max-width: 768px)
-
-    .menu
-        ul
-            font-size 16px
-            font-weight 300
-            li
-                width 100%
-                margin-left 15px
