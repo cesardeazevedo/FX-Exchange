@@ -1,34 +1,21 @@
 .menu
-    margin-top 30px
+    margin-top 20px
     background-color rgba(0,0,0,0.4)
     display table
-    min-height 55px
+    min-height 50px
     font-size 12.3px
     text-transform uppercase
     text-align center
     width 100%
     border-top-left-radius 5px
     border-top-right-radius 5px
+    overflow hidden
 
     ul
         display table-row-group
         color white
 
-        // Keeping border-radius
-        li:nth-child(1)
-            a, &:hover
-                border-top-left-radius 5px
-
-        li:nth-child(8)
-            a, &:hover
-                border-top-right-radius 5px
-
-        li:nth-child(12)
-            a, &:hover
-                border-top-right-radius 5px
-
         li
-            // display table-cell
             float none
             border-bottom 3px solid #eee
             transition all .2s
