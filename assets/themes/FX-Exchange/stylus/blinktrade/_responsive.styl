@@ -21,11 +21,6 @@ trading =
 
     #id_toolbar
         display block!important
-        .container
-            padding-top 20px
-
-            .navbar-collapse
-                margin-bottom 10px
 
 @media(max-width: 1200px)
     .menu
@@ -37,31 +32,19 @@ trading =
             li
                 width 100%
 
-    .account-header
-        margin-top 170px!important
-
-
 // /* Medium Devices, Desktops */
 @media (min-width: 992px)
 
-
-
-    .page
-        margin-top 170px
-
-
     #id_toolbar
         display block!important
-        .container
-            padding-top 20px
-
-            .navbar-collapse
-                margin-bottom 10px
 
     #trading
         {trading}
 
 @media(max-width: 992px)
+
+    body
+        padding-top 160px
 
     .loginBox
         width 100%!important
@@ -72,7 +55,6 @@ trading =
             display flex
             flex-direction column
             align-items center
-            padding-top 20px
 
             .navbar-collapse
                 margin-top 20px
@@ -84,18 +66,17 @@ trading =
 // /* Small Devices, Tablets */
 @media (max-width: 768px)
 
+    body
+        padding-top 100px
+
     .loginBox
         width 100%!important
-
-    .account-header
-        margin-top 120px!important
 
     #id_toolbar
         display block!important
 
         .container
             display block!important
-            padding-top 20px
             .navbar-brand
                 img
                     max-width 225px

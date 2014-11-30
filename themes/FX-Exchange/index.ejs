@@ -7,7 +7,7 @@
 <!-- FrontPage Image -->
 
 <!-- div.container -->
-<div class="container" style="min-height: 1040px;">
+<div class="container" style="min-height: 910px;">
   <!-- landing page-->
 
   <!-- Start -->
@@ -381,6 +381,45 @@
         </ul>
     </div>
   </div>
+  <div id="market" class="page bitex-view" style="margin-top:-3px">
+        <div class="row-fluid">
+        <div class="page-header">
+            <h2 class="bitex-view-title thin-200"><%= t.views.market.title %></h2>
+        </div>
+        </div>
+        <div class="bitex-view-content">
+        </div>
+    </div>
+
+  <div id="faq" class="page row-fluid bitex-view" style="margin-top:-3px" >
+    <div class="page-header">
+      <h1 class="bitex-view-title thin-200"><%= t.views.faq.title %></h1>
+    </div>
+
+    <div class="bitex-view-content">
+      <div class="accordion">
+        <%// categories['faq'].forEach(function(post) { %>
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle collapsed">
+                <%//=post.title %>
+            </a>
+          </div>
+          <div class="accordion-body collapse ">
+            <div class="accordion-inner">
+                <%//=post.content %>
+            </div>
+          </div>
+        </div>
+        <%// } %>
+      </div>
+
+      <h3>
+      <a href="" class="bitex-support-link" target="_blank">
+        <i class="icon-envelope"></i> <%= t.views.faq.get_in_touch %></a>
+      </h3>
+    </div>
+  </div>
   <div class="page row-fluid bitex-display-if-logged" style="margin-top:-4px">
     <div class="span9">
       <div id="profile" class="bitex-view">
@@ -677,45 +716,7 @@
     </div>
   </div>
 
-  <div id="market" class="page bitex-view">
-    <div class="row-fluid">
-      <div class="page-header">
-        <h2 class="bitex-view-title"><%= t.views.market.title %></h2>
-      </div>
-    </div>
-    <div class="bitex-view-content">
-    </div>
-  </div>
 
-  <div id="faq" class="page row-fluid bitex-view" >
-    <div class="page-header">
-      <h1 class="bitex-view-title"><%= t.views.faq.title %></h1>
-    </div>
-
-    <div class="bitex-view-content">
-      <div class="accordion">
-        <%// categories['faq'].forEach(function(post) { %>
-        <div class="accordion-group">
-          <div class="accordion-heading">
-            <a class="accordion-toggle collapsed">
-                <%//=post.title %>
-            </a>
-          </div>
-          <div class="accordion-body collapse ">
-            <div class="accordion-inner">
-                <%//=post.content %>
-            </div>
-          </div>
-        </div>
-        <%// } %>
-      </div>
-
-      <h3>
-      <a href="" class="bitex-support-link" target="_blank">
-        <i class="icon-envelope"></i> <%= t.views.faq.get_in_touch %></a>
-      </h3>
-    </div>
-  </div>
 
 <!-- div.container -->
 </div>
