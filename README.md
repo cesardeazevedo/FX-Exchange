@@ -31,7 +31,7 @@ you can start a new theme based on this architecture.
     $ git checkout StartNewTheme
 
 ##Screenshots
-
+![Screenshot](http://i.imgur.com/zkFRhNO.png?1)
 
 ## License
 [GNU GENERAL PUBLIC LICENSE](https://github.com/cesardeazevedo/FX-Exchange/blob/master/LICENSE) © Blinktrade, Inc.
