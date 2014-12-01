@@ -3,6 +3,8 @@ FX-Exchange
 
 My Frontend Theme  to [blinktrade frontend](https://github.com/blinktrade/frontend)
 
+##Demo
+[See Demo](http://cesardeazevedo.github.io/FX-Exchange)
 
 ##Tools
 * [Gulp](https://github.com/gulpjs/gulp) for build system.
@@ -30,7 +32,7 @@ you can start a new theme based on this architecture.
     $ git clone https://github.com/cesardeazevedo/FX-Exchange.git
     $ git checkout StartNewTheme
 
-##Screenshots
+##Screenshot
 ![Screenshot](http://i.imgur.com/zkFRhNO.png?1)
 
 ## License
