@@ -207,18 +207,22 @@
                             <table>
                                 <tr>
                                     <td>
+                                        <!-- input-group -->
                                         <div class="input-group">
                                             <span class="input-group-addon addon-field es">Nombre de usuario</span>
                                             <input class="focus form-control" id="id_landing_username" placeholder="" size="30" type="text">
                                         </div>
+                                        <!-- input-group -->
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
+                                        <!-- input-group -->
                                         <div class="input-group">
                                             <span class="input-group-addon addon-field es">Contraseña</span>
                                             <input id="id_landing_password" placeholder="" size="30" type="password" class="form-control">
                                         </div>
+                                        <!-- input-group -->
                                     </td>
                                 </tr>
                                 <tr>
@@ -243,129 +247,120 @@
 
   <!-- signup page-->
   <div id="signup" class="page  row-fluid bitex-view">
-    <div class="page-header">
-      <h1 class="bitex-view-title thin-200">Registrarse</h1>
-      <label>¿Ya estás registrado? <a href="#" data-switch-view="signin">Ingressar&nbsp<span class="glyphicon glyphicon-log-in"></span></a>.</label>
+    <h1 class="bitex-view-title thin-200">Registrarse</h1>
+    <label>¿Ya estás registrado? <a href="#" data-switch-view="signin">Ingressar&nbsp<span class="glyphicon glyphicon-log-in"></span></a>.</label>
     <hr />
 
+    <!-- bitex-view-content -->
     <div class="bitex-view-content">
-      <form action="" accept-charset="UTF-8" class="form-horizontal" id="new_user" method="post">
-        <div class="control-group">
-          <!-- <label class="control-label">Nombre de usuario</label> -->
-          <br />
+        <form action="" accept-charset="UTF-8" class="form-horizontal" id="new_user" method="post">
+            <br />
 
-          <div class="input-group">
-            <span class="input-group-addon addon-field">Nombre de usuario</span>
-            <input id="id_signup_username" class="form-control" name="Username" size="30" type="text" placeholder="">
-          </div>
-        </div>
+            <!-- input-group -->
+            <div class="input-group">
+                <span class="input-group-addon addon-field">Nombre de usuario</span>
+                <input id="id_signup_username" class="form-control" name="Username" size="30" type="text" placeholder="">
+            </div>
+            <!-- input-group -->
 
-        <div class="control-group">
-          <!-- <label class="control-label">Email</label> -->
-          <br />
+            <br />
 
-          <div class="input-group">
-            <span class="input-group-addon addon-field">Email</span>
-            <input id="id_signup_email" class="form-control" name="Email" size="30" type="text" placeholder="ej.: jose@email.com">
-          </div>
-        </div>
+            <!-- input-group -->
+            <div class="input-group">
+                <span class="input-group-addon addon-field">Email</span>
+                <input id="id_signup_email" class="form-control" name="Email" size="30" type="text" placeholder="ej.: jose@email.com">
+            </div>
+            <!-- input-group -->
+            <br />
 
-        <div class="control-group">
-          <!-- <label class="control-label">Contraseña</label> -->
-          <br />
+            <!-- input-group -->
+            <div class="input-group">
+                <span class="input-group-addon addon-field">Contraseña</span>
+                <input id="id_signup_password" class="form-control" name="Password" size="30" type="password">
+                <span class="input-group-addon help-block">Por lo menos 8 caracteres</span>
+            </div>
+            <!-- input-group -->
 
-          <div class="input-group">
-              <span class="input-group-addon addon-field">Contraseña</span>
-            <input id="id_signup_password" class="form-control" name="Password" size="30" type="password">
-              <span class="input-group-addon help-block">Por lo menos 8 caracteres</span>
-          </div>
-        </div>
+            <br />
+            <!-- input-group -->
+            <div class="input-group">
+                <span class="input-group-addon addon-field">Confirme su contraseña</span>
+                <input id="id_signup_password2" class="form-control" name="Password2" size="30" type="password">
+            </div>
+            <!-- input-group -->
+            <br />
 
-        <div class="control-group">
-          <!-- <label class="control-label">Confirme su contraseña</label> -->
-          <br />
-          <div class="input-group">
-              <span class="input-group-addon addon-field">Confirme su contraseña</span>
-            <input id="id_signup_password2" class="form-control" name="Password2" size="30" type="password">
-          </div>
-        </div>
+            <label>Pais</label>
+            <select class="form-control" id="id_signup_country" name="country"></select>
 
-        <br />
+            <br />
+            <!-- id_signup_state_group -->
+            <div id="id_signup_state_group" class="control-group" style="display: none">
+                <label>Estado o Provincia</label>
+                <select class="form-control" id="id_signup_state" name="state"></select>
+            </div>
+            <!-- id_signup_state_group -->
 
-        <div class="control-group" style="">
-          <label>Pais</label>
-          <select class="form-control" id="id_signup_country" name="country"></select>
-        </div>
-
-        <br />
-        <div id="id_signup_state_group" class="control-group" style="display: none">
-          <label>Estado o Provincia</label>
-          <select class="form-control" id="id_signup_state" name="state"></select>
-        </div>
-
-        <div class="control-group" style="display: none;">
-          <label class="control-label">Corridor</label>
-          <div class="controls">
-            <select class="form-control" id="id_signup_broker" name="broker"></select>
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label"></label>
-          <div class="controls">
+            <div style="display: none;">
+                <label class="control-label">Corridor</label>
+                <select class="form-control" id="id_signup_broker" name="broker"></select>
+            </div>
+            <label class="control-label"></label>
             <div id="signup_broker_details"></div>
-          </div>
-        </div>
 
-        <div class="control-group">
-          <label class="control-label">Terminos del servicio</label>
-          <div class="checkbox">
-              <label>
-              <input id="user_agreed_tos" name="" type="checkbox" checked>Estoy de acuerdo con Terminos de servicio
-            </label>
-          </div>
+            <label class="control-label">Terminos del servicio</label>
+            <div class="checkbox">
+                <label>
+                    <input id="user_agreed_tos" name="" type="checkbox" checked>Estoy de acuerdo con Terminos de servicio
+                </label>
+            </div>
+        </form>
+    <br />
+        <!-- form-group -->
+        <div class="form-group">
+            <button id="id_btn_signup" class="btn btn-primary">Registrarse</button>
         </div>
-      </form>
-      <br />
-      <div class="form-group">
-          <button id="id_btn_signup" class="btn btn-primary">Registrarse</button>
-      </div>
+        <!-- form-group -->
     </div>
-    </div>
+    <!-- bitex-view-content -->
   </div>
+  <!-- signup page-->
 
   <!-- signin page-->
   <div id="signin" class="page  row-fluid bitex-view">
-    <div class="page-header">
-      <h1 class="bitex-view-title thin-200">Ingresar</h1>
+    <h1 class="bitex-view-title thin-200">Ingresar</h1>
     <label>Si todavía no te has registrado <a href="#" data-switch-view="signup">Regístrate ahora</a></label>
     <hr />
+    <!-- bitex-view-content -->
     <div class="bitex-view-content">
-      <form accept-charset="UTF-8" action="" method="post">
-        <div class="">
-          <!-- <label for="id_username">Nombre de usuario</label> -->
+        <form accept-charset="UTF-8" action="" method="post">
 
-          <div class="input-group">
-              <span class="input-group-addon addon-field es">Nombre de usuario</span>
-            <input autocapitalize="off" autocorrect="off" class="form-control" id="id_username" name="username" type="text" placeholder=""></div>
-        </div>
-        <br />
-        <div class="clearfix">
-          <!-- <label for="id_password">Contraseña</label> -->
-          <div class="input-group">
-              <span class="input-group-addon addon-field es">Contraseña</span>
-            <input id="id_password" class="form-control" placeholder="" name="password" type="password">
-          </div>
-        </div>
-        <br />
-        <p><a href="#" data-switch-view="forgot_password">Olvidaste tu contraseña?</a></p>
-        <br />
-        <div class="actions">
-          <input id="id_btn_login" class="btn btn-primary" name="commit" type="submit" value="Ingressar">
-        </div>
-      </form>
+            <!-- input-group -->
+            <div class="input-group">
+                <span class="input-group-addon addon-field es">Nombre de usuario</span>
+                <input autocapitalize="off" autocorrect="off" class="form-control" id="id_username" name="username" type="text" placeholder="">
+            </div>
+            <!-- input-group -->
+            <br />
+            <!-- input-group -->
+            <div class="input-group">
+                <span class="input-group-addon addon-field es">Contraseña</span>
+                <input id="id_password" class="form-control" placeholder="" name="password" type="password">
+            </div>
+            <!-- input-group -->
+            <br />
+            <p><a href="#" data-switch-view="forgot_password">Olvidaste tu contraseña?</a></p>
+            <br />
+            <!-- actions -->
+            <div class="actions">
+                <input id="id_btn_login" class="btn btn-primary" name="commit" type="submit" value="Ingressar">
+            </div>
+            <!-- actions -->
+        </form>
     </div>
-    </div>
+    <!-- bitex-view-content -->
   </div>
+  <!-- signin page-->
 
   <div id="forgot_password" class="page row bitex-view">
     <div class="page-header">
@@ -377,9 +372,10 @@
           <label for="id_forgot_password_email">Email</label>
 
           <div class="input">
-            <input autocapitalize="off" autocorrect="off" id="id_forgot_password_email" name="email" type="text" placeholder="">
+            <input autocapitalize="off" autocorrect="off" id="id_forgot_password_email" class="form-control" name="email" type="text" placeholder="">
           </div>
         </div>
+        <br />
         <div class="actions">
           <input id="id_btn_forgot_password" class="btn btn-primary" name="commit" type="submit" value="Recuperar contraseña">
         </div>
