@@ -25,6 +25,10 @@ you can compile harpjs to the `_site` folder.
 
     $ harp compile . _site
     
+##Deploy to gh-pages
+
+    $ git subtree push --prefix _site origin gh-pages
+
 ##Generator
 this project was initial released with [generator-blinktrade](https://github.com/cesardeazevedo/generator-blinktrade) scaffolding, with jekyll for static generator html pages, but was hard changed to support gulp, harp and browserSync architecture.
 
