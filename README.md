@@ -16,13 +16,15 @@ install the dependencies with
 
     $ npm install
 
-build and run it with gulp task
+build and run it with gulp task, the browser will show up automatically at `http://localhost:3001`
 
     $ gulp
     
-harpjs will compile the sources to the `_site` folder.
-the browser will show up automatically at `http://localhost:3001`
+##Compile
+you can compile harpjs to the `_site` folder.
 
+    $ harp compile . _site
+    
 ##Generator
 this project was initial released with [generator-blinktrade](https://github.com/cesardeazevedo/generator-blinktrade) scaffolding, with jekyll for static generator html pages, but was hard changed to support gulp, harp and browserSync architecture.
 
