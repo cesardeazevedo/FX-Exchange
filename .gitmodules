@@ -1,0 +1,3 @@
+[submodule "nib"]
+    path = assets/themes/FX-Exchange/css/_nib
+    url  = https://github.com/tj/nib

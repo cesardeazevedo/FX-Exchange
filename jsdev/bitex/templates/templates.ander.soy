@@ -525,6 +525,8 @@
 
 /**
   * @param deposit_message
+  * @param hasInstantDepositsEnabled
+  * @param? amount
   */
 {template .DepositCryptoCurrencyContentDialog}
   <div class="row-fluid" data-deposit-status="prepare">
@@ -546,7 +548,7 @@
       {$data['Wallet']}
     </h4>
     <div class="text-center">
-      <img src="https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl={$data['Wallet']}"/>
+      <img src="https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=bitcoin%3A{$data['Wallet']}"/>
     </div>
   </div>
 {/template}
@@ -718,6 +720,7 @@
   * @param showFeeDataEntry
   * @param amountID
   * @param? amount
+  * @param? formattedAmount
   * @param percentFeeID
   * @param fixedFeeID
   * @param totalFeesID
