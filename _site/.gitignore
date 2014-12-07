@@ -74,11 +74,14 @@ _plugins/
 #Themes
 _includes/header.ander.html
 _includes/footer.ander.html
+_includes/header.default.html
+_includes/footer.default.html
 
 _includes/header.whitedev.html
 _includes/footer.whitedev.html
 
 _layouts/application**
+_layouts/default.html
 
 assets/themes/ander/
 assets/themes/default/
