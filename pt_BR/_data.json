@@ -126,6 +126,10 @@
     "ledger": {
       "title": "Livro contábil"
     },
+    "algotrading":{
+        "title":  "Algorithm Trading",
+        "settings": "Configurações"
+    },
     "settings": {
       "title": "Configurações"
     },
@@ -150,7 +154,8 @@
       "withdraw": "Saques",
       "verification": "Verificar a sua conta",
       "support": "Suporte e Sugestões",
-      "logout": "Sair"
+      "logout": "Sair",
+      "algotrading": "Algo Trading"
     }
   }
 }
