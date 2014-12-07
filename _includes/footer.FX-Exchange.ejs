@@ -1,0 +1,81 @@
+
+    <footer class="footer">
+      <div class="container">
+        <% if (load_application) { %>
+        <table>
+            <tr>
+                <td>
+                    <a href="#" data-switch-view="admin">admin</a>
+                </td>
+                <td>
+                    Latency: <span class="bitex-model" data-model-key="latency">0</span> ms
+                </td>
+                <td>
+                    <a href="http://blinktrade.com/" target="_blank">© 2014 BlinkTrade Inc</a>
+                </td>
+                <td>
+                    <a href="https://github.com/blinktrade/" target="_blank">Proudly 100% open source <span class="bitex-model" data-model-key="JSVersion"></span></a>
+                </td>
+                <td>
+                    Version: <%= deploy_version %>
+                </td>
+                <td>
+                    <a href="http://nytm.org/made-in-nyc/" target="_blank">Made with <span style="color: #d11f0d;font-size: 19px;">♥</span> in NYC</a>
+                </td>
+            </tr>
+        </table>
+          <% } %>
+      </div>
+      <div class="BlurFooter">
+      </div>
+    </footer>
+    <% if (load_application) { %>
+    <script data-cfasync="false" type="text/javascript">
+      var _app;  // global application object
+      (function(){
+          var broker_id = <% if (blinktrade_broker_id) { %><%- blinktrade_broker_id %><% } else { %><%- blinktrade_broker_id %><% } %>;
+          var country_code = "<% if (default_country_code){ %><%- default_country_code %><% } else { %><%- default_country_code %><% } %>";
+          var blinktrade_api = "<% if (blinktrade_backend_api) { %><%- blinktrade_backend_api %><% } else { %><%- blinktrade_backend_api %><% } %>";
+
+        _app = new BlinkTradeApp(broker_id, country_code );
+        _app.run(blinktrade_api);
+      })();
+    </script>
+    <% } %>
+
+    <% if (google_analytics_id) { %>
+    <script data-cfasync="false" type="text/javascript">
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', '_gat');
+
+      _gat('create', '{{ site.google_analytics_id }}', 'auto');
+      _gat('send', 'pageview');
+
+    </script>
+    <% } %>
+
+    <% if (zopim_key) { %>
+    <!--Start of Zopim Live Chat Script-->
+    <script data-cfasync="false" type="text/javascript">
+      window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+          d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+          _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+        $.src='https://v2.zopim.com/?{{ site.zopim_key }}';z.t=+new Date;$.
+            type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+    </script>
+    <!--End of Zopim Live Chat Script-->
+    <% } %>
+    <script src="<%= baseurl %>/assets/js/externs/jquery-2.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1067 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en_US" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+    <meta charset="utf-8">
+    
+    
+    
+        <title>SurBitcoin - The first bitcoin exchange in Venezuela</title>
+    
+    <!-- Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="BlinkTrade">
+
+    
+        <meta name="description" content="The first bitcoin exchange in Venezuela">
+        <meta name="keywords" content="Buy and sell bitcoin in Venezuela, bitcoin exchange in Venezuela, sell bitcoins in Venezuela, buy bitcoins in Venezuela">
+        <meta property="og:title" content="SurBitcoin - The first bitcoin exchange in Venezuela">
+        <meta property="og:description" content="The first bitcoin exchange in Venezuela">
+    
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost:3001/FX-Exchange/themes/FX-Exchange/">
+    <meta property="og:image" content="http://localhost:3001/FX-Exchange/assets/exchange_logos/surbitcoin_social_network_share.png">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/FX-Exchange/assets/exchange_logos/surbitcoin_favicon.ico">
+    <link rel="icon" href="/FX-Exchange/assets/exchange_logos/surbitcoin_favicon.ico" type="image/x-icon">
+
+    <!-- Feed -->
+    <link rel="alternate" type="application/rss+xml" href="http://localhost:3001/FX-Exchange/feed.xml">
+
+    <meta charset="utf-8">
+
+    <link rel="canonical" href="http://localhost:3001/FX-Exchange"/>
+    <script type="text/rocketscript" data-rocketsrc="//apis.google.com/js/plusone.js"></script>
+
+    <!-- <base href="FX-Exchange/"> -->
+
+    <!-- <link href="/FX-Exchange/assets/themes/FX-Exchange/css/bootstrap-combined.min.css" rel="stylesheet"> -->
+    <link href="/FX-Exchange/assets/themes/FX-Exchange/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/FX-Exchange/assets/themes/FX-Exchange/css/font-awesome.min.css" rel="stylesheet">
+
+    
+    <link href="/FX-Exchange/assets/themes/FX-Exchange/css/Dialog.css" rel="stylesheet">
+    <link href="/FX-Exchange/assets/themes/FX-Exchange/css/fuelux.css" rel="stylesheet">
+    <link href="/FX-Exchange/assets/themes/FX-Exchange/css/default.uni-form.css" rel="stylesheet">
+    <link href="/FX-Exchange/assets/themes/FX-Exchange/css/style.css?v=3e74480" rel="stylesheet">
+    <link href="/FX-Exchange/assets/themes/FX-Exchange/css/blinktrade.css?" rel="stylesheet">
+    <script data-cfasync="false" src="/FX-Exchange/assets/js/bitex_app_blink_trade.compiled.en_US.default.js?v=3e74480" type="text/javascript"></script>
+    
+  </head>
+  <body class="ws-not-connected bitex-not-logged active-view-start "/>
+    <div id="id_toolbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-inners container-fluid">
+        <div class="container">
+
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+            <a href=" http://localhost:3001 " class="navbar-brand" data-switch-view="offerbook">
+                <img data-switch-view="offerbook" src="/FX-Exchange/assets/exchange_logos/surbitcoin_toolbar_logo_black.png" style="">
+            </a>
+            
+        </div>
+        <div class="navbar-collapse collapse" id="collapse" role="navigation">
+          <ul class="nav navbar-nav navbar-right">
+            
+            <li class="bitex-display-if-logged">
+                <a href="" data-switch-view="offerbook">
+                    <span data-switch-view="offerbook" class="glyphicon glyphicon-sort primary-color" aria-hidden="true"></span>
+                    Trading
+                </a>
+            </li>
+            <li>
+                <a href="" data-switch-view="market">
+                    <span data-switch-view="market" class="glyphicon glyphicon-signal primary-color" aria-hidden="true"></span>
+                    Market
+                </a>
+            </li>
+            <li class="bitex-hide-if-logged">
+                <a href="" data-switch-view="signin">
+                    <span data-switch-view="signin" class="glyphicon glyphicon-user primary-color" aria-hidden="true"></span>
+                    Sigin
+                </a>
+            </li>
+            <li class="bitex-hide-if-logged">
+                <a href="" data-switch-view="signup">
+                    <span data-switch-view="signup" class="glyphicon glyphicon-plus primary-color" aria-hidden="true"></span>
+                    Signup
+                </a>
+            </li>
+            
+            <li>
+                <a href="" data-switch-view="faq">
+                    <span data-switch-view="faq" class="glyphicon glyphicon-question-sign primary-color" aria-hidden="true"></span>
+                    FAQ
+                </a>
+            </li>
+
+            <li class="dropdown">
+            <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-globe primary-color" aria-hidden="true"></span>
+                en_US <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                
+                
+                <li role="presentation"><a role="menuitem" tabindex="-1" class="languages" href="/FX-Exchange/en_US" >en_US</a></li>
+                  
+                
+                
+                <li role="presentation"><a role="menuitem" tabindex="-1" class="languages" href="/FX-Exchange/es" >es</a></li>
+                  
+                
+                
+                <li role="presentation"><a role="menuitem" tabindex="-1" class="languages" href="/FX-Exchange/pt_BR" >pt_BR</a></li>
+                  
+                
+              </ul>
+            </li>
+            <li class="bitex-display-if-logged">
+                <a href="javascript:location.reload()">
+                    <span class="glyphicon glyphicon-log-out primary-color"></span>
+                    Logout
+                </a>
+            </li>
+
+            
+            <li>
+              <button id="id_button_connect_ws" class="bitex-hide-if-ws-connected btn-link"
+                  style="padding: 6px 15px 10px;">Connect <i class="icon-white icon-repeat"></i></button>
+            </li>
+            
+            </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix" ></div>
+
+    <div id="id_notifications" class="notifications top-right" style="z-index: 9000;"></div>
+
+
+
+
+
+<!-- FrontPage Image -->
+<div class="frontpage">
+    <img src="/FX-Exchange/assets/exchange_logos/surbitcoin-frontpage3.jpg" class="bitex-hide-if-logged" id="imageBackground" alt="image">
+    <img src="/FX-Exchange/assets/exchange_logos/surbitcoin-frontpage_blur.jpg" id="imageBackground" alt="image">
+</div>
+<!-- FrontPage Image -->
+
+<!-- div.container -->
+<div class="container" style="min-height: 910px;">
+  <!-- landing page-->
+
+  <!-- Start -->
+  <div id="start" class="row-fluid bitex-view bitex-view-admin">
+        <!-- col-md-8 -->
+        <div class="col-md-8">
+            <header class="logoHome">
+                <img src="/FX-Exchange/assets/exchange_logos/surbitcoin_landing_page_logo.png" style="">
+                <p class="lead bitex-view-title bitex-view-title">
+                <!-- translate variable -->
+                
+                    
+                
+                
+                        The first bitcoin exchange in Venezuela
+                
+                
+                </p>
+                <span class="text-center">
+                    <a href="" class="btn btn-success btn-lg" data-switch-view="signup">Signup</a>
+                </span>
+                <script>
+                    setInterval(function(){
+                    console.log("index");
+                    },2000);
+                </script>
+                <!-- row-fluid -->
+            </header>
+        </div>
+        <!-- col-md-8 -->
+
+        <!-- col-md-4 -->
+        <div class="col-md-4">
+            <!-- bitex-view-content -->
+            <div class="bitex-view-content">
+                <!-- row bitex-hide-if-logged bitex-view-content -->
+                <div class="row bitex-hide-if-logged bitex-view-content">
+                    <!-- form -->
+                    <form action="">
+                        <!-- loginBox -->
+                        <div class="loginBox">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <!-- input-group -->
+                                        <div class="input-group">
+                                            <span class="input-group-addon addon-field index">Username</span>
+                                            <input class="focus form-control" id="id_landing_username" placeholder="" size="30" type="text">
+                                        </div>
+                                        <!-- input-group -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <!-- input-group -->
+                                        <div class="input-group">
+                                            <span class="input-group-addon addon-field index">Password</span>
+                                            <input id="id_landing_password" placeholder="" size="30" type="password" class="form-control">
+                                        </div>
+                                        <!-- input-group -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#forgot_password">Password recovery</a>
+                                        <button id="id_landing_signin" class="btn btn-default pull-right">login</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- loginBox -->
+                        <div class="clearfix" style="height: 20px"></div>
+                    </form>
+                    <!-- form -->
+                </div>
+                <!-- row bitex-hide-if-logged bitex-view-content -->
+            </div>
+            <!-- bitex-view-content -->
+        </div>
+        <!-- col-md-4 -->
+  </div>
+  <!-- Start -->
+
+  <!-- signup page-->
+  <div id="signup" class="page  row-fluid bitex-view">
+    <h1 class="bitex-view-title thin-200">Signup</h1>
+    <label>Already registered? <a href="#" data-switch-view="signin">Login&nbsp<span class="glyphicon glyphicon-log-in"></span></a>.</label>
+    <hr />
+
+    <!-- bitex-view-content -->
+    <div class="bitex-view-content">
+        <form action="" accept-charset="UTF-8" class="form-horizontal" id="new_user" method="post">
+            <br />
+
+            <!-- input-group -->
+            <div class="input-group">
+                <span class="input-group-addon addon-field">Username</span>
+                <input id="id_signup_username" class="form-control" name="Username" size="30" type="text" placeholder="">
+            </div>
+            <!-- input-group -->
+
+            <br />
+
+            <!-- input-group -->
+            <div class="input-group">
+                <span class="input-group-addon addon-field">Email address</span>
+                <input id="id_signup_email" class="form-control" name="Email" size="30" type="text" placeholder="eg.: joe@doe.com">
+            </div>
+            <!-- input-group -->
+            <br />
+
+            <!-- input-group -->
+            <div class="input-group">
+                <span class="input-group-addon addon-field">Password</span>
+                <input id="id_signup_password" class="form-control" name="Password" size="30" type="password">
+                <span class="input-group-addon help-block">At least 8 characters</span>
+            </div>
+            <!-- input-group -->
+
+            <br />
+            <!-- input-group -->
+            <div class="input-group">
+                <span class="input-group-addon addon-field">Confirm your password</span>
+                <input id="id_signup_password2" class="form-control" name="Password2" size="30" type="password">
+            </div>
+            <!-- input-group -->
+            <br />
+
+            <label>Country</label>
+            <select class="form-control" id="id_signup_country" name="country"></select>
+
+            <br />
+            <!-- id_signup_state_group -->
+            <div id="id_signup_state_group" class="control-group" style="display: none">
+                <label>State or Province</label>
+                <select class="form-control" id="id_signup_state" name="state"></select>
+            </div>
+            <!-- id_signup_state_group -->
+
+            <div style="display: none;">
+                <label class="control-label">Broker</label>
+                <select class="form-control" id="id_signup_broker" name="broker"></select>
+            </div>
+            <label class="control-label"></label>
+            <div id="signup_broker_details"></div>
+
+            <label class="control-label">Terms of service</label>
+            <!-- checkbox -->
+            <div class="checkbox">
+                <label>
+                    <input id="user_agreed_tos" name="" type="checkbox" checked>I agree with terms of service
+                </label>
+            </div>
+            <!-- checkbox -->
+        </form>
+    <br />
+        <!-- form-group -->
+        <div class="form-group">
+            <button id="id_btn_signup" class="btn btn-primary">Signup</button>
+        </div>
+        <!-- form-group -->
+    </div>
+    <!-- bitex-view-content -->
+  </div>
+  <!-- signup page-->
+
+  <!-- signin page-->
+  <div id="signin" class="page  row-fluid bitex-view">
+    <h1 class="bitex-view-title thin-200">Sigin</h1>
+    <label>Don&#39;t have an account? <a href="#" data-switch-view="signup">Singup</a></label>
+    <hr />
+    <!-- bitex-view-content -->
+    <div class="bitex-view-content">
+        <form accept-charset="UTF-8" action="" method="post">
+
+            <!-- input-group -->
+            <div class="input-group">
+                <span class="input-group-addon addon-field index">Username</span>
+                <input autocapitalize="off" autocorrect="off" class="form-control" id="id_username" name="username" type="text" placeholder="">
+            </div>
+            <!-- input-group -->
+            <br />
+            <!-- input-group -->
+            <div class="input-group">
+                <span class="input-group-addon addon-field index">Password</span>
+                <input id="id_password" class="form-control" placeholder="" name="password" type="password">
+            </div>
+            <!-- input-group -->
+            <br />
+            <p><a href="#" data-switch-view="forgot_password">Forgot your password?</a></p>
+            <br />
+            <!-- actions -->
+            <div class="actions">
+                <input id="id_btn_login" class="btn btn-primary" name="commit" type="submit" value="Login">
+            </div>
+            <!-- actions -->
+        </form>
+    </div>
+    <!-- bitex-view-content -->
+  </div>
+  <!-- signin page-->
+
+  <!-- forgot_password -->
+  <div id="forgot_password" class="page row bitex-view">
+    <!-- page-header -->
+    <div class="page-header">
+      <h1 class="bitex-view-title thin-200">Password recovery</h1>
+    </div>
+    <!-- page-header -->
+    <!-- bitex-view-content -->
+    <div class="bitex-view-content">
+      <form accept-charset="UTF-8" action="" method="post">
+
+        <!-- input-group -->
+        <div class="input-group">
+            <span class="input-group-addon">Email</span>
+            <input autocapitalize="off" autocorrect="off" id="id_forgot_password_email" class="form-control" name="email" type="text" placeholder="">
+        </div>
+        <!-- input-group -->
+        <br />
+        <!-- actions -->
+        <div class="actions">
+          <input id="id_btn_forgot_password" class="btn btn-primary" name="commit" type="submit" value="Recover password">
+        </div>
+        <!-- actions -->
+      </form>
+    </div>
+    <!-- bitex-view-content -->
+  </div>
+  <!-- forgot_password -->
+
+  <!-- set_new_password -->
+  <div id="set_new_password" class="page row bitex-view">
+      <!-- page-header -->
+      <div class="page-header">
+          <h1 class="bitex-view-title thin-200">Set new password</h1>
+      </div>
+      <!-- set_new_password -->
+      <div class="bitex-view-content">
+          <form accept-charset="UTF-8" class="form-horizontal" id="redefine_new_password_form" method="post">
+              <!-- control-group -->
+              <div class="control-group">
+                  <label for="id_set_new_password_token" class="control-label">
+                      Security code
+                  </label>
+                  <div class="controls">
+                      <input id="id_set_new_password_token" class="form-control" name="Email" size="30" type="text" placeholder="" />
+                      <p class="help-block">We just sent a security code to your email.</p>
+                  </div>
+              </div>
+              <!-- control-group -->
+
+              <!-- control-group -->
+              <div class="control-group">
+                  <label for="id_set_new_password_password" class="control-label">
+                      New password
+                  </label>
+                  <div class="controls">
+                      <input id="id_set_new_password_password" class="form-control" name="Password" size="30" type="password" />
+                      <p class="help-block">At least 8 characters</p>
+                  </div>
+              </div>
+              <!-- control-group -->
+
+              <!-- control-group -->
+              <div class="control-group">
+                  <label for="id_set_new_password_password2" class="control-label">Confirm your password</label>
+                  <div class="controls">
+                      <input id="id_set_new_password_password2" class="form-control" name="Password2" size="30" type="password" />
+                  </div>
+              </div>
+              <!-- control-group -->
+
+              <!-- actions -->
+              <div class="actions">
+                  <input id="id_btn_set_new_password" class="btn btn-primary" name="commit" type="submit" value="Reset password">
+              </div>
+              <!-- actions -->
+          </form>
+      </div>
+  </div>
+  <!-- set_new_password -->
+
+  <!-- bitex-display-if-logged -->
+  <div class="bitex-display-if-logged">
+  <!-- id_sidebar -->
+      <div id="id_sidebar" class="account-header ">
+
+          <h1>
+              <span class="bitex-model bitex-view-title thin-200" data-model-key="DisplayName"></span>
+              <small> (<span class="bitex-model bitex-view-title" data-model-key="PseudoName"></span>)</small>
+              <form class="form-inline">
+                  <h4><label class="control-label thin-200" for="id_instrument_1">Market:</label>
+                      <select class="form-control" id="id_instrument_1">
+                          <option></option>
+                      </select>
+                  </h4>
+              </form>
+          </h1>
+          <!-- bitex-view-content -->
+          <div class="bitex-view-content">
+              <!-- account_balance -->
+              <div id="account_balance" style="">
+                  <div id="id_account_summary_content" class=""></div>
+              </div>
+              <!-- account_balance -->
+          </div>
+          <!-- bitex-view-content -->
+      </div>
+      <!-- menu -->
+      <div class="menu">
+          <ul class="nav navbar-nav">
+              <li style="">
+              <a href="" data-switch-view="profile">
+                  <span data-switch-view="profile" class="glyphicon glyphicon-user primary-color"></span>
+                  My Profile</a>
+              </li>
+              <li style="">
+              <a href="" data-switch-view="my_broker">
+                  <span data-switch-view="my_broker" class="glyphicon glyphicon-copyright-mark primary-color"></span>
+                  About the exchange</a></li>
+
+              <li>
+              <a href="" data-switch-view="trading">
+                  <span data-switch-view="trading" class="glyphicon glyphicon-transfer primary-color"></span>
+                  Buy or Sell</a>
+              </li>
+
+              <li>
+              <a href="" data-switch-view="offerbook">
+                  <span data-switch-view="offerbook" class="glyphicon glyphicon-book primary-color"></span>
+                  Order book</a>
+              </li>
+
+              <li style="">
+              <a href="" data-switch-view="ledger">
+                  <span data-switch-view="ledger" class="glyphicon glyphicon-th-list primary-color"></span>
+                  Ledger</a>
+              </li>
+
+              <li style="" class="bitex-display-if-broker">
+              <a href="" data-switch-view="customers">
+                  My customers</a>
+              </li>
+
+              <li style="" class="bitex-display-if-broker">
+              <a href="" data-switch-view="deposit_requests">
+                  <span data-switch-view="deposit_requests" class="glyphicon glyphicon-inbox primary-color"></span>
+                  Deposit requests</a>
+              </li>
+
+              <li style="" class="bitex-display-if-broker">
+              <a href="" data-switch-view="withdraw_requests">
+                  Withdraw requests</a>
+              </li>
+
+              <li style="">
+              <a href="" data-switch-view="deposit">
+                  <span data-switch-view="deposit" class="glyphicon glyphicon-inbox primary-color"></span>
+                  My Deposits</a>
+              </li>
+
+              <li style="">
+              <a href="" data-switch-view="withdraw">
+                  <span data-switch-view="withdraw" class="glyphicon glyphicon-send primary-color"></span>
+                  My Withdrawals</a>
+              </li>
+
+              <li style="" class="bitex-display-if-non-broker" id="verification_menu_id">
+              <a href="" data-switch-view="verification">
+                  <span data-switch-view="verification" class="glyphicon glyphicon-pencil primary-color"></span>
+                  Verify your account</a>
+              </li>
+
+              <li style="">
+              <a href="" data-switch-view="faq">
+                  <span data-switch-view="faq" class="glyphicon glyphicon-info-sign primary-color"></span>
+                  Suggestions &amp; Support</a>
+              </li>
+          </ul>
+      </div>
+      <!-- menu -->
+  </div>
+  <!-- market -->
+  <div id="market" class="page bitex-view" style="margin-top:-3px">
+      <!-- page-header -->
+      <div class="page-header">
+          <h2 class="bitex-view-title thin-200">Market</h2>
+      </div>
+      <!-- page-header -->
+      <div class="bitex-view-content"></div>
+  </div>
+  <!-- market -->
+
+  <!-- faq -->
+  <div id="faq" class="page row-fluid bitex-view" style="margin-top:-3px" >
+      <div class="page-header">
+          <h1 class="bitex-view-title thin-200">FAQ - Frequently Asked Questions</h1>
+      </div>
+
+      <!-- bitex-view-content -->
+      <div class="bitex-view-content">
+          <!-- accordion -->
+          <div class="accordion">
+              
+              <!-- accordion-group -->
+              <div class="accordion-group">
+                  <div class="accordion-heading">
+                      <a class="accordion-toggle collapsed">
+                          
+                      </a>
+                  </div>
+                  <!-- accordion-body -->
+                  <div class="accordion-body collapse ">
+                      <div class="accordion-inner">
+                          
+                      </div>
+                  </div>
+                  <!-- accordion-body -->
+              </div>
+              <!-- accordion-group -->
+              
+          </div>
+          <!-- accordion -->
+          <h3>
+              <a href="" class="bitex-support-link" target="_blank">
+                  <i class="icon-envelope"></i> Contact us in case you didn&#39;t find the answer to your question
+              </a>
+          </h3>
+      </div>
+      <!-- bitex-view-content -->
+  </div>
+  <!-- faq -->
+
+  <!-- page row-fluid bitex-display-if-logged -->
+  <div class="page row-fluid bitex-display-if-logged" style="margin-top:-4px">
+      <!-- profile -->
+      <div id="profile" class="bitex-view">
+          <!-- panel panel-default -->
+          <div class="panel panel-default" style="margin-bottom:-2px">
+              <!-- section-title panel-heading -->
+              <div class="section-title panel-heading">
+                  <h2 class="bitex-view-title thin-200">
+                      <span class="glyphicon glyphicon-user"></span>
+                      My Profile
+                  </h2>
+              </div>
+              <!-- section-title panel-heading -->
+          </div>
+          <!-- panel panel-default -->
+
+          <!-- profile_content -->
+          <div id="profile_content" class="bitex-view-content">
+              <div id="account_overview_user_id"></div>
+          </div>
+          <!-- profile_content -->
+          <hr />
+          <!-- panel panel-default -->
+          <div class="panel panel-default">
+              <!-- section-title panel-heading -->
+              <div class="section-title panel-heading">
+                  <h3 class="bitex-view-title thin-200">Enable or Disable Two steps authentication</h3>
+              </div>
+              <!-- section-title panel-heading -->
+              <!-- panel-body -->
+              <div class="panel-body">
+                  <!-- content bitex-view-content -->
+                  <div class="content bitex-view-content">
+
+                      <!-- id_enable_two_factor_div -->
+                      <div id="id_enable_two_factor_div" class="form-horizontal ">
+
+                          <!-- control-group -->
+                          <div class="control-group">
+                              <label class="control-label">Key</label>
+
+                              <div class="controls">
+                                  <span id='secret' class="bitex-model" data-model-key="TwoFactorSecret"></span>
+                              </div>
+                          </div>
+                          <!-- control-group -->
+
+                          <!-- control-group -->
+                          <div class="control-group">
+                              <div class="controls">
+                                  <img id="id_secret_qr" style="width: 100%; margin-top: -30px" src="">
+                              </div>
+                          </div>
+                          <!-- control-group -->
+
+                          <!-- control-group -->
+                          <div class="control-group">
+                              <label class="control-label">Authentication code</label>
+
+                              <!-- controls -->
+                              <div class="controls">
+                                  <input id="id_second_step_verification"
+                                  type="text"
+                                  class="input-block-level form-control" pattern="\d+"
+                                  title="Code generated by Google Authenticatior"
+                                  placeholder="Ex. 555555" required>
+                              </div>
+                              <!-- controls -->
+                          </div>
+                          <!-- control-group -->
+                      </div>
+                      <!-- id_enable_two_factor_div -->
+                      <button id="id_btn_enable_two_factor" class="btn btn-primary">Enable</button>
+                      <button id="id_btn_disable_two_factor" class="btn btn-danger">Disable</button>
+                  </div>
+                  <!-- content bitex-view-content -->
+              </div>
+              <!-- panel-body -->
+          </div>
+          <!-- panel panel-default -->
+      </div>
+      <!-- profile -->
+
+      <!-- trading -->
+      <div id="trading" class="bitex-view">
+          <!-- panel panel-default -->
+          <div class="panel panel-default">
+              <!-- section-title -->
+              <div class="section-title panel-heading">
+                  <h2 class="bitex-view-title thin-200">
+                      <span class="glyphicon glyphicon-transfer"></span>
+                      Buy or Sell
+                  </h2>
+              </div>
+              <!-- section-title -->
+              <!-- panel-body -->
+              <div class="panel-body">
+                  <!-- bitex-view-content -->
+                  <div class="bitex-view-content">
+                      <div id="trading_order_entry_content" class="row"></div>
+                      <div id="id_trading_well"></div>
+                  </div>
+                  <!-- bitex-view-content -->
+              </div>
+              <!-- panel-body -->
+          </div>
+          <!-- panel panel-default -->
+      </div> 
+      <!-- trading -->
+
+      <!-- offerbook -->
+      <div id="offerbook" class="bitex-view">
+          <!-- panel panel-default -->
+          <div class="panel panel-default">
+              <!-- section-title -->
+              <div class="section-title panel-heading">
+                  <h2 class="bitex-view-title thin-200">
+                      <span class="glyphicon glyphicon-book"></span>
+                      Order Book
+                  </h2>
+              </div>
+              <!-- section-title -->
+              <!-- bitex-view-content -->
+              <div class="bitex-view-content">
+                  <div class="panel-body">
+                      <div id="offer_book_order_entry_content" class="row"></div>
+                  </div>
+              </div>
+              <!-- bitex-view-content -->
+          </div>
+          <!-- panel panel-default -->
+          <!-- row -->
+          <div class="row">
+              <div class="col-md-6">
+                  <div id="id_order_book_bid_content" class="span6"></div>
+              </div>
+              <div class="col-md-6">
+                  <div id="id_order_book_ask_content" class="span6"></div>
+              </div>
+          </div>
+          <!-- row -->
+      </div>
+      <!-- offerbook -->
+
+      <!-- customers -->
+      <div id="customers" class="bitex-view">
+          <!-- section-title -->
+          <div class="section-title">
+              <h3 class="bitex-view-title">My customers</h3>
+          </div>
+          <!-- section-title -->
+          <div id="id_customers_well"></div>
+      </div>
+      <!-- customers -->
+
+      <!-- my_broker -->
+      <div id="my_broker" class="bitex-view">
+          <div class="bitex-view-title"></div>
+          <div class="bitex-view-content"></div>
+      </div>
+      <!-- my_broker -->
+
+      <!-- account-overview -->
+      <div id="account_overview" class="bitex-view">
+          <!-- section-title -->
+          <div class="section-title">
+              <h3 class="bitex-view-title thin-200">Account overview</h3>
+          </div>
+          <!-- section-title -->
+          <!-- content bitex-view-content -->
+          <div class="content bitex-view-content">
+              <!-- row-fluid -->
+              <div class="row-fluid">
+                  <div class="span6">
+                      <div id="account_overview_header_id"></div>
+                  </div>
+                  <div class="span6">
+                      <div id="account_overview_fees_id">
+                          <div id="account_overview_fees_balances_id"></div>
+                          <button id="id_btn_user_fees" class="btn btn-primary btn-small pull-right" style="margin-bottom: 10px;">Set user fees</button>
+                      </div>
+                      <div id="account_overview_verify_data_id"></div>
+                      <div id="account_overview_balances_id"></div>
+                  </div>
+              </div>
+              <!-- row-fluid -->
+              <div class="bitex-account-overview-view-content"></div>
+          </div>
+          <!-- content bitex-view-content -->
+      </div>
+      <!-- account-overview -->
+
+      <!-- withdraw -->
+      <div id="withdraw" class="bitex-view">
+          <!-- panel panel-default -->
+          <div class="panel panel-default no-padding">
+              <!-- section-title -->
+              <div class="section-title panel-heading">
+                  <h2 class="bitex-view-title thin-200">
+                      <span class="glyphicon glyphicon-send"></span>
+                      My Withdrawals
+                  </h2>
+              </div>
+              <!-- section-title -->
+              <!-- panel-body -->
+              <div class="panel-body">
+                  <!-- content bitex-view-content -->
+                  <div class="content bitex-view-content">
+                      <div id="id_user_balances_well"></div>
+
+                      <div id="id_withdraw_list"></div>
+                  </div>
+                  <!-- content bitex-view-content -->
+              </div>
+              <!-- panel-body -->
+          </div>
+          <!-- panel panel-default -->
+      </div>
+      <!-- withdraw -->
+
+      <!-- withdraw_request -->
+      <div id="withdraw_requests" class="bitex-view">
+          <!-- panel panel-default -->
+          <div class="panel panel-default">
+              <!-- section-title -->
+              <div class="section-title panel-heading">
+                  <h2 class="bitex-view-title thin-200">
+                      <span class="glyphicon glyphicon-send"></span>
+                      Withdrawals requests
+                  </h2>
+              </div>
+              <!-- section-title -->
+              <!-- panel-body -->
+              <div class="panel-body">
+                  <div class="content bitex-view-content">
+                      <div id="id_withdraw_request_list"></div>
+                  </div>
+              </div>
+              <!-- panel-body -->
+          </div>
+          <!-- panel panel-default -->
+      </div>
+      <!-- withdraw_request -->
+
+      <!-- deposit -->
+      <div id="deposit" class="bitex-view">
+          <!-- panel panel-default -->
+          <div class="panel panel-default no-padding">
+              <!-- section-title -->
+              <div class="section-title panel-heading">
+                  <h2 class="bitex-view-title thin-200">
+                      <span class="glyphicon glyphicon-inbox"></span>
+                      My Deposits
+                  </h2>
+              </div>
+              <!-- section-title -->
+              <!-- panel-body -->
+              <div class="panel-body">
+                  <!-- content bitex-view-content -->
+                  <div class="content bitex-view-content">
+                      <div id="id_deposit_balances_container"></div>
+
+                      <div id="id_deposit_list"></div>
+                  </div>
+                  <!-- content bitex-view-content -->
+              </div>
+              <!-- panel-body -->
+          </div>
+          <!-- panel panel-default -->
+      </div>
+      <!-- deposit -->
+
+      <!-- deposit_request -->
+      <div id="deposit_requests" class="bitex-view">
+          <!-- section-title -->
+          <div class="section-title">
+              <h3 class="bitex-view-title">Deposit requests</h3>
+          </div>
+          <!-- section-title -->
+          <!-- content bitex-view-content -->
+          <div class="content bitex-view-content">
+              <div id="id_deposit_request_list"></div>
+          </div>
+          <!-- content bitex-view-content -->
+      </div>
+      <!-- deposit_request -->
+
+      <!-- ledger -->
+      <div id="ledger" class="bitex-view">
+          <!-- panel panel-default -->
+          <div class="panel panel-default">
+              <!-- section-title panel-heading -->
+              <div class="section-title panel-heading">
+                  <h2 class="bitex-view-title thin-200">
+                      <span class="glyphicon glyphicon-th-list"></span>
+                      Ledger
+                  </h2>
+              </div>
+              <!-- section-title panel-heading -->
+              <!-- content bitex-view-content -->
+              <div class="content bitex-view-content">
+                  <div id="id_ledger_balances_container"></div>
+                  <div id="id_ledger_list"></div>
+              </div>
+              <!-- content bitex-view-content -->
+          </div>
+          <!-- panel panel-default -->
+      </div>
+      <!-- ledger -->
+
+      <!-- settings -->
+      <div id="settings" class="bitex-view">
+          <div class="section-title">
+              <h3 class="bitex-view-title">Settings</h3>
+          </div>
+          <div class="bitex-view-content"></div>
+      </div>
+      <!-- settings -->
+
+      <!-- verification -->
+      <div id="verification" class="bitex-view">
+          <!-- section-title -->
+          <div class="section-title">
+              <h3 class="bitex-view-title">Verify your account</h3>
+          </div>
+          <!-- section-title -->
+          bitex-view-content
+          <div class="bitex-view-content">
+              <iframe id="JotFormIFrame"
+                  onload="window.parent.scrollTo(0,0)"
+                  allowtransparency="true"
+                  src=""
+                  frameborder="0"
+                  style="width:100%; height:1550px; border:none;"
+                  scrolling="no"></iframe>
+              <script type="text/javascript">
+                  window.handleIFrameMessage = function (e) {
+                      var args = e.data.split(":");
+                      var iframe = document.getElementById("JotFormIFrame");
+                      if (!iframe)
+                          return;
+                      switch (args[0]) {
+                          case "scrollIntoView":
+                              iframe.scrollIntoView();
+                              break;
+                          case "setHeight":
+                              if (args[1] > 0) {
+                                  iframe.style.height = ( parseInt(args[1], 10) + 200 ) +
+                                      "px";
+                              }
+                              break;
+                      }
+                  };
+                  if (window.addEventListener) {
+                      window.addEventListener("message", handleIFrameMessage, false);
+                  } else if (window.attachEvent) {
+                      window.attachEvent("onmessage", handleIFrameMessage);
+                  }
+              </script>
+          </div>
+      </div>
+      <!-- verification -->
+  </div>
+
+  <div id="id_sidebar" class="span3 sidebar bitex-view
+      bitex-view-profile
+      bitex-view-trading
+      bitex-view-offerbook
+      bitex-view-customers
+      bitex-view-account_overview
+      bitex-view-withdraw
+      bitex-view-withdraw_requests
+      bitex-view-deposit
+      bitex-view-deposit_requests
+      bitex-view-ledger
+      bitex-view-settings
+      bitex-view-my_broker
+      bitex-view-verification">
+
+  </div>
+</div>
+
+
+
+    <footer class="footer">
+      <div class="container">
+        
+        <table>
+            <tr>
+                <td>
+                    <a href="#" data-switch-view="admin">admin</a>
+                </td>
+                <td>
+                    Latency: <span class="bitex-model" data-model-key="latency">0</span> ms
+                </td>
+                <td>
+                    <a href="http://blinktrade.com/" target="_blank">© 2014 BlinkTrade Inc</a>
+                </td>
+                <td>
+                    <a href="https://github.com/blinktrade/" target="_blank">Proudly 100% open source <span class="bitex-model" data-model-key="JSVersion"></span></a>
+                </td>
+                <td>
+                    Version: 3e74480
+                </td>
+                <td>
+                    <a href="http://nytm.org/made-in-nyc/" target="_blank">Made with <span style="color: #d11f0d;font-size: 19px;">♥</span> in NYC</a>
+                </td>
+            </tr>
+        </table>
+          
+      </div>
+      <div class="BlurFooter">
+      </div>
+    </footer>
+    
+    <script data-cfasync="false" type="text/javascript">
+      var _app;  // global application object
+      (function(){
+          var broker_id = 5;
+          var country_code = "US";
+          var blinktrade_api = "api.testnet.blinktrade.com";
+
+        _app = new BlinkTradeApp(broker_id, country_code );
+        _app.run(blinktrade_api);
+      })();
+    </script>
+    
+
+    
+    <script data-cfasync="false" type="text/javascript">
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', '_gat');
+
+      _gat('create', '{{ site.google_analytics_id }}', 'auto');
+      _gat('send', 'pageview');
+
+    </script>
+    
+
+    
+    <!--Start of Zopim Live Chat Script-->
+    <script data-cfasync="false" type="text/javascript">
+      window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+          d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+          _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+        $.src='https://v2.zopim.com/?{{ site.zopim_key }}';z.t=+new Date;$.
+            type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+    </script>
+    <!--End of Zopim Live Chat Script-->
+    
+    <script src="/FX-Exchange/assets/js/externs/jquery-2.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
+
+
+

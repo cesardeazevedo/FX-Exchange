@@ -1,0 +1,37 @@
+{
+    "globals": {
+        "url": "https://testnet.blinktrade.com",
+        "author": "BlinkTrade",
+        "baseurl": "",
+        "url": "http://localhost:3001",
+        "deploy_version": "3e74480",
+        "exchange": "surbitcoin",
+        "exchange_logo": "surbitcoin",
+        "default_country_code": "US",
+        "blinktrade_broker_id": 5,
+        "blinktrade_backend_api": "api.testnet.blinktrade.com",
+        "google_analytics_id": "UA-53856711-1",
+        "zopim_key": "2SSNIzvxy8fBypKoZJ0pI43tUoNCv8os",
+        "markdown": "kramdown",
+        "load_application": true,
+        "lang": "en_US",
+        "languages": [
+            "en_US",
+            "es",
+            "pt_BR"
+        ],
+        "exclude": [
+            "jsdev",
+            "LICENSE",
+            "README.md",
+            "config.rb",
+            "deploy.sh",
+            "build_javascript.sh"
+        ],
+        "source": ".",
+        "destination": "./_site",
+        "paginate": 5,
+        "paginate_path": "post/page:num",
+        "permalink": "/post/:title/"
+    }
+}

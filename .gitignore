@@ -66,6 +66,10 @@ target/
 .sass-cache/
 .DS_Store
 Thumbs.db
+<<<<<<< HEAD
 _site/
 .idea/
 .c9/
+=======
+node_modules/
+>>>>>>> master

@@ -1,0 +1,175 @@
+<% body_classes = 'ws-not-connected bitex-not-logged active-view-start'%>
+<% load_application = true %>
+
+<!DOCTYPE html>
+<html lang="<%= lang %>" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+    <meta charset="utf-8">
+    <% var t%>
+    <%  
+    if(current.path.length == 0) {
+        t = (lang == "en_US") ?
+            public.en_US._data : (lang == "es") ?
+            public.es._data    : (lang == "pt_BR") ?
+            public.pt_BR._data : public.en_US._data
+    } else {
+        t = (current.path[0] == "en_US") ?
+            public.en_US._data : (current.path[0] == "es") ?
+            public.es._data    : (current.path[0] == "pt_BR") ?
+            public.pt_BR._data : public.en_US._data
+    }
+    %>
+    <% if (exchange  == 'chilebit'){  %>
+        <title><%= t.exchanges.chilebit.title %></title>
+    <% } if (exchange  == 'surbitcoin'){  %>
+        <title><%= t.exchanges.surbitcoin.title %></title>
+    <% } if (exchange == 'demo') { %>
+        <title><%= t.exchanges.demo.title %></title>
+    <% } %>
+    <!-- Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="<%= author %>">
+
+    <% if (exchange  == 'chilebit'){  %>
+        <meta name="description" content="<%= t.exchanges.chilebit.description %>">
+        <meta name="keywords" content="<%= t.exchanges.chilebit.keywords %>">
+        <meta property="og:title" content="<%= t.exchanges.chilebit.title %>">
+        <meta property="og:description" content="<%= t.exchanges.chilebit.description %>">
+    <% } if (exchange  == 'surbitcoin'){  %>
+        <meta name="description" content="<%= t.exchanges.surbitcoin.description %>">
+        <meta name="keywords" content="<%= t.exchanges.surbitcoin.keywords %>">
+        <meta property="og:title" content="<%= t.exchanges.surbitcoin.title %>">
+        <meta property="og:description" content="<%= t.exchanges.surbitcoin.description %>">
+    <% } if (exchange == 'demo') { %>
+        <meta name="description" content="<%= t.exchanges.demo.description %>">
+        <meta name="keywords" content="<%= t.exchanges.demo.keywords %>">
+        <meta property="og:title" content="<%= t.exchanges.demo.title %>">
+        <meta property="og:description" content="<%= t.exchanges.demo.description %>">
+    <% } %>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%= url %><%= baseurl %>/themes/FX-Exchange/">
+    <meta property="og:image" content="<%= url %><%= baseurl %>/assets/exchange_logos/<%= exchange_logo %>_social_network_share.png">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="<%= baseurl %>/assets/exchange_logos/<%= exchange_logo %>_favicon.ico">
+    <link rel="icon" href="<%= baseurl %>/assets/exchange_logos/<%= exchange_logo %>_favicon.ico" type="image/x-icon">
+
+    <!-- Feed -->
+    <link rel="alternate" type="application/rss+xml" href="<%= url %><%= baseurl %>/feed.xml">
+
+    <meta charset="utf-8">
+
+    <link rel="canonical" href="<%= url %><%= baseurl %>"/>
+    <script type="text/rocketscript" data-rocketsrc="//apis.google.com/js/plusone.js"></script>
+
+    <!-- <base href="FX-Exchange/"> -->
+
+    <!-- <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/bootstrap-combined.min.css" rel="stylesheet"> -->
+    <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/font-awesome.min.css" rel="stylesheet">
+
+    <% if (load_application) { %>
+    <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/Dialog.css" rel="stylesheet">
+    <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/fuelux.css" rel="stylesheet">
+    <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/default.uni-form.css" rel="stylesheet">
+    <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/style.css?v=<%= deploy_version %>" rel="stylesheet">
+    <link href="<%= baseurl %>/assets/themes/FX-Exchange/css/blinktrade.css?" rel="stylesheet">
+    <script data-cfasync="false" src="<%= baseurl %>/assets/js/bitex_app_blink_trade.compiled.en_US.default.js?v=<%- deploy_version %>" type="text/javascript"></script>
+    <% } %>
+  </head>
+  <body class="<% if (body_classes) { %><%= body_classes %> <% } %>"/>
+    <div id="id_toolbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-inners container-fluid">
+        <div class="container">
+
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <% if (load_application) { %>
+            <a href="<% if (load_application) {%> <%-url %> <% } else { %> <%- '#' %><% } %>" class="navbar-brand" data-switch-view="offerbook">
+                <img data-switch-view="offerbook" src="<%= baseurl %>/assets/exchange_logos/<%= exchange_logo %>_toolbar_logo_black.png" style="">
+            </a>
+            <% } else { %>
+            <a class="navbar-brand" href="<%= baseurl %>/">
+                <img src="<%= baseurl %>/assets/exchange_logos/<%= exchange_logo %>_toolbar_logo.png" style="display:none">
+            </a>
+            <% } %>
+        </div>
+        <div class="navbar-collapse collapse" id="collapse" role="navigation">
+          <ul class="nav navbar-nav navbar-right">
+            <% if (load_application) { %>
+            <li class="bitex-display-if-logged">
+                <a href="" data-switch-view="offerbook">
+                    <span data-switch-view="offerbook" class="glyphicon glyphicon-sort primary-color" aria-hidden="true"></span>
+                    <%= t.views.toolbar.trading %>
+                </a>
+            </li>
+            <li>
+                <a href="" data-switch-view="market">
+                    <span data-switch-view="market" class="glyphicon glyphicon-signal primary-color" aria-hidden="true"></span>
+                    <%= t.views.toolbar.market %>
+                </a>
+            </li>
+            <li class="bitex-hide-if-logged">
+                <a href="" data-switch-view="signin">
+                    <span data-switch-view="signin" class="glyphicon glyphicon-user primary-color" aria-hidden="true"></span>
+                    <%= t.views.toolbar.signin %>
+                </a>
+            </li>
+            <li class="bitex-hide-if-logged">
+                <a href="" data-switch-view="signup">
+                    <span data-switch-view="signup" class="glyphicon glyphicon-plus primary-color" aria-hidden="true"></span>
+                    <%= t.views.toolbar.signup %>
+                </a>
+            </li>
+            <% } %>
+            <li>
+                <a href="" data-switch-view="faq">
+                    <span data-switch-view="faq" class="glyphicon glyphicon-question-sign primary-color" aria-hidden="true"></span>
+                    <%= t.views.toolbar.faq %>
+                </a>
+            </li>
+
+            <li class="dropdown">
+            <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-globe primary-color" aria-hidden="true"></span>
+                <%= lang %> <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <% languages.forEach(function(_lang) { %>
+                <% if  (lang != 'lang') { %>
+                <li role="presentation"><a role="menuitem" tabindex="-1" class="languages" href="<%= baseurl %>/<%=_lang%>" ><%= _lang %></a></li>
+                  <% } %>
+                <% }) %>
+              </ul>
+            </li>
+            <li class="bitex-display-if-logged">
+                <a href="javascript:location.reload()">
+                    <span class="glyphicon glyphicon-log-out primary-color"></span>
+                    <%= t.views.sidebar.logout %>
+                </a>
+            </li>
+
+            <% if (load_application) { %>
+            <li>
+              <button id="id_button_connect_ws" class="bitex-hide-if-ws-connected btn-link"
+                  style="padding: 6px 15px 10px;"><%= t.views.toolbar.connect %> <i class="icon-white icon-repeat"></i></button>
+            </li>
+            <% } %>
+            </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix" ></div>
+
+    <div id="id_notifications" class="notifications top-right" style="z-index: 9000;"></div>
+
+
