@@ -11,10 +11,13 @@
 <h1>Build and Run</h1>
 <p>install the dependencies with</p>
 <pre><code>$ npm install</code></pre>
-<p>build and run it with gulp task</p>
+<p>build and run it with gulp task, the browser will show up automatically at <code>http://localhost:3001</code></p>
 <pre><code>$ gulp</code></pre>
-<p>harpjs will compile the sources to the <code>_site</code> folder.
-the browser will show up automatically at <code>http://localhost:3001</code></p>
+<h2>Compile</h2>
+<p>you can compile harpjs to the <code>_site</code> folder.</p>
+<pre><code>$ harp compile . _site</code></pre>
+<h2>Deploy to gh-pages</h2>
+<pre><code>$ git subtree push --prefix _site origin gh-pages</code></pre>
 <h2>Generator</h2>
 <p>this project was initial released with <a href="https://github.com/cesardeazevedo/generator-blinktrade">generator-blinktrade</a> scaffolding, with jekyll for static generator html pages, but was hard changed to support gulp, harp and browserSync architecture.</p>
 <h2>Start new theme</h2>

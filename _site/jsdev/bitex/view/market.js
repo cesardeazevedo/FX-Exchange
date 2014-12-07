@@ -207,16 +207,24 @@ bitex.view.MarketView.prototype.onBitexTrade_ = function(e) {
     return;
   }
   var msg = e.data;
-  var record = []; 
+  var record = [];
 
   record["TradeID"] = msg["TradeID"];
   record["Market"] = msg["Symbol"];
   record["Size"] = msg['MDEntrySize'];
   record["Price"] = msg['MDEntryPx'];
   record["Side"] = msg['Side'];
-  record["Buyer"] = bitex.util.getPseudoName(msg['MDEntryBuyerID']);
-  record["Seller"] = bitex.util.getPseudoName(msg['MDEntrySellerID']);
+  record["Buyer"] = msg['MDEntryBuyerID'];
+  record["Seller"] = msg['MDEntrySellerID'];
+  if (goog.isDefAndNotNull( msg['MDEntryBuyer'] )) {
+    record["BuyerUsername"] = msg['MDEntryBuyer'];
+  }
+  if (goog.isDefAndNotNull( msg['MDEntrySeller'] )) {
+    record["SellerUsername"] = msg['MDEntrySeller'];
+  }
   record["Created"] = msg['MDEntryDate'] + " " + msg['MDEntryTime'];
+
+  record["Timestamp"] = bitex.util.convertServerUTCDateTimeStrToTimestamp(msg['MDEntryDate'], msg['MDEntryTime']);
 
   this.last_trades_table_.insertOrUpdateRecord(record, 0);
 };
@@ -231,7 +239,15 @@ bitex.view.MarketView.prototype.onTradeHistoryReponse_ = function(e) {
   }
 
   var msg = e.data;
-  this.last_trades_table_.setResultSet( msg['TradeHistoryGrp'], msg['Columns'] );
+  msg['Columns'].push('Timestamp');
+  goog.array.forEach(msg['TradeHistoryGrp'], function(trade_record) {
+    var record_created =  trade_record[msg['Columns'].indexOf('Created')];
+    var record_timestamp = bitex.util.convertServerUTCDateTimeStrToTimestamp(record_created.split(' ')[0],
+                                                                             record_created.split(' ')[1]);
+    trade_record.push(record_timestamp);
+  });
+
+  this.last_trades_table_.setResultSet(msg['TradeHistoryGrp'], msg['Columns']);
 };
 
 
