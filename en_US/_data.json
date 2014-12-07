@@ -126,6 +126,10 @@
     "ledger": {
       "title": "Ledger"
     },
+    "algotrading":{
+        "title":  "Algorithm Trading",
+        "settings": "Settings"
+    },
     "settings": {
       "title": "Settings"
     },
@@ -150,7 +154,8 @@
       "withdraw": "My Withdrawals",
       "verification": "Verify your account",
       "support": "Suggestions & Support",
-      "logout": "Logout"
+      "logout": "Logout",
+      "algotrading": "Algo Trading"
     }
   }
 }
