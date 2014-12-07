@@ -66,10 +66,25 @@ target/
 .sass-cache/
 .DS_Store
 Thumbs.db
-<<<<<<< HEAD
-_site/
-.idea/
-.c9/
-=======
 node_modules/
->>>>>>> master
+
+_i18n/
+_plugins/
+
+#Themes
+_includes/header.ander.html
+_includes/footer.ander.html
+
+_includes/header.whitedev.html
+_includes/footer.whitedev.html
+
+_layouts/application**
+
+assets/themes/ander/
+assets/themes/default/
+assets/themes/whitedev/
+
+themes/ander/
+themes/default/
+themes/whitedev/
+
