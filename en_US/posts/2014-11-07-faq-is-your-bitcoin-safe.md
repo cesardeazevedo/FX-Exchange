@@ -1,10 +1,3 @@
----
-layout:     post
-title:      "Is your bitcoin safe?"
-date:       2014-11-07 00:12:00
-categories: en_US faq
----
-
 Our main concern is to allow traders to interact within a safe environment. Bitcoins are stored in a multisignature cold storage wallet and away from the servers of the exchange. So even though if the server of the exchange has been hacked the bitcoins are out of the reach of the bad boys.
 
 The multisignature wallet requires 2 out of 3 signatures in order to be able to move the bitcoins.

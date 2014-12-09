@@ -426,36 +426,46 @@
   <!-- faq -->
   <div id="faq" class="page row-fluid bitex-view" style="margin-top:-3px" >
       <div class="page-header">
-          <h1 class="bitex-view-title thin-200"><%= t.views.faq.title %></h1>
+          <h1 class="bitex-view-title thin-200">
+              <span class="glyphicon glyphicon-question-sign"></span>
+              <%= t.views.faq.title %>
+          </h1>
       </div>
 
       <!-- bitex-view-content -->
       <div class="bitex-view-content">
-          <!-- accordion -->
-          <div class="accordion">
-              <%// categories['faq'].forEach(function(post) { %>
-              <!-- accordion-group -->
-              <div class="accordion-group">
-                  <div class="accordion-heading">
-                      <a class="accordion-toggle collapsed">
-                          <%//=post.title %>
-                      </a>
+          <!-- panel-group  -->
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+              <% for(var post in public.en_US.posts._data){ %>
+              <!-- panel panel-default -->
+              <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading-<%- post %>">
+                      <h3 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#<%- post %>" aria-expanded="true" aria-controls="<%- post %>">
+                              <%= public.en_US.posts._data[post].title %>
+                          </a>
+                      </h3>
                   </div>
-                  <!-- accordion-body -->
-                  <div class="accordion-body collapse ">
-                      <div class="accordion-inner">
-                          <%//=post.content %>
+                  <!-- panel-collapse collapse-->
+                  <div id="<%- post %>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-<%- post %>">
+                      <div class="panel-body">
+                          <% if(lang == "en_US") { %>
+                          <% var p = public.en_US.posts._data[post]; %>
+                          <% p.yield = partial("en_US/posts/"+post); %>
+                          <%- partial("/en_US/posts/_post", p) %>
+                          <% } %>
                       </div>
                   </div>
-                  <!-- accordion-body -->
+                  <!-- panel-collapse collapse-->
               </div>
-              <!-- accordion-group -->
-              <%// } %>
+              <!-- panel panel-default -->
+              <% } %>
           </div>
-          <!-- accordion -->
+          <!-- panel-group  -->
           <h3>
               <a href="" class="bitex-support-link" target="_blank">
-                  <i class="icon-envelope"></i> <%= t.views.faq.get_in_touch %>
+                  <i class="glyphicon glyphicon-envelope"></i> <%= t.views.faq.get_in_touch %>
               </a>
           </h3>
       </div>
@@ -574,19 +584,27 @@
       </div> 
       <!-- trading -->
 
+      <!-- algotrading -->
       <div id="algotrading" class="bitex-view">
+          <!-- panel panel-default -->
           <div class="panel panel-default">
+              <!-- section-title panel-heading -->
               <div class="section-title panel-heading">
                   <h2 class="bitex-view-title thin-200">
                       <span class="glyphicon glyphicon-sort"></span>
                       <%= t.views.algotrading.title %>
                   </h2>
               </div>
+              <!-- section-title panel-heading -->
+              <!-- panel-body -->
               <div class="panel-body">
                   <div class="bitex-view-content"></div>
               </div>
+              <!-- panel-body -->
           </div>
+          <!-- panel panel-default -->
       </div>
+      <!-- algotrading -->
 
       <!-- offerbook -->
       <div id="offerbook" class="bitex-view">

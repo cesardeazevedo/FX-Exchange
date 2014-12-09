@@ -1,10 +1,3 @@
----
-layout:     post
-title:      "What is the relationship between the exchange and Blinktrade? "
-date:       2014-11-01 00:05:00
-categories: en_US faq
----
-
 Blinktrade is the technology provider.
 
 The exchange operator hire the service of blinktrade.
