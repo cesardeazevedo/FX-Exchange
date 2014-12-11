@@ -12,6 +12,13 @@ My Frontend Theme  to [blinktrade frontend](https://github.com/blinktrade/fronte
 * [BrowserSync](BrowserSync) to sync brownser with livereload
 
 #Build and Run
+
+clone this repository recursively
+
+
+    $ git clone --recursive https://github.com/cesardeazevedo/FX-Exchange.git
+
+
 install the dependencies with
 
     $ npm install
