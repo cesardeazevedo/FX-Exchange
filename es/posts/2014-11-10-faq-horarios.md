@@ -1,0 +1,2 @@
+Trading: 24 horas/ 7 dias a la semana
+Helpdesk: Lunes a Viernes 9 AM - 6 PM (GMT -5)

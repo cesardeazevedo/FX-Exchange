@@ -1,0 +1,1 @@
+No. El usuario siempre compra bitcoin de otro usuario que los está vendiendo. Lo único que hacemos es proporcionar un ambiente simple y seguro para operar. Garantizamos que los compradores puedan obtener sus BTC y los vendedores sus COL$ a un precio acordado entre ellos.

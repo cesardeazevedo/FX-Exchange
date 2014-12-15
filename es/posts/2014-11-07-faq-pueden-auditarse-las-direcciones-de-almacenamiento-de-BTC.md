@@ -1,0 +1,1 @@
+Si. Tanto la clave pública de almacenamiento en frío como la del almacenamiento en caliente se pueden auditar. Lo único que tendrá que hacer será dirigirse al blockchain e introducir la dirección que usted desee verificar.

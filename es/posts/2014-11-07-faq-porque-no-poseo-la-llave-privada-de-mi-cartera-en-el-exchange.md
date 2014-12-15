@@ -1,0 +1,1 @@
+Nuestro principio es que los bitcoins hay que depositarlos en el exchange con el fin de intercambiarlos por FIAT. En consecuencia, para garantizar la seguridad y la rapidez en la transacción, el exchange mantiene la posesión de los depósitos tanto en FIAT como en BTC.
