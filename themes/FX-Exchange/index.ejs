@@ -7,7 +7,7 @@
 <!-- FrontPage Image -->
 
 <!-- div.container -->
-<div class="container" style="min-height: 910px;">
+<div class="container" >
   <!-- landing page-->
 
   <!-- Start -->
@@ -45,11 +45,6 @@
                 <span class="text-center">
                     <a href="" class="btn btn-success btn-lg" data-switch-view="signup"><%= t.views.start.signup %></a>
                 </span>
-                <script>
-                    setInterval(function(){
-                    console.log("<%= current.path[0] %>");
-                    },2000);
-                </script>
                 <!-- row-fluid -->
             </header>
         </div>
@@ -437,24 +432,28 @@
           <!-- panel-group  -->
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
-              <% for(var post in public.en_US.posts._data){ %>
+             <% var faq = (current.path[0] == "en_US")  ?
+                public.en_US.posts._data : (current.path[0] == "es") ?
+                public.es.posts._data    : (current.path[0] == "pt_BR") ?
+                public.pt_BR.posts._data : public.en_US.posts._data %>
+              <% for(var post in faq){ %>
+ 
               <!-- panel panel-default -->
               <div class="panel panel-default">
                   <div class="panel-heading" role="tab" id="heading-<%- post %>">
                       <h3 class="panel-title">
                           <a data-toggle="collapse" data-parent="#accordion" href="#<%- post %>" aria-expanded="true" aria-controls="<%- post %>">
-                              <%= public.en_US.posts._data[post].title %>
+                              <%= faq[post].title %>
                           </a>
                       </h3>
                   </div>
                   <!-- panel-collapse collapse-->
                   <div id="<%- post %>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-<%- post %>">
                       <div class="panel-body">
-                          <% if(lang == "en_US") { %>
-                          <% var p = public.en_US.posts._data[post]; %>
-                          <% p.yield = partial("en_US/posts/"+post); %>
-                          <%- partial("/en_US/posts/_post", p) %>
-                          <% } %>
+                          <% var p = faq[post] %>
+                          <% var url = current.path[0] == "index" ? lang : "" %>
+                          <% p.yield = partial(url+"/posts/"+post) %>
+                          <%- partial(url+"/posts/_post", p) %>
                       </div>
                   </div>
                   <!-- panel-collapse collapse-->
