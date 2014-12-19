@@ -5,28 +5,46 @@
         <table>
             <tr>
                 <td>
-                    <a href="#" data-switch-view="admin">admin</a>
+                    <a href="#" data-switch-view="admin">
+                        <div class="footerItem">
+                            admin
+                        </div>
+                    </a>
                 </td>
                 <td>
-                    Latency: <span class="bitex-model" data-model-key="latency">0</span> ms
+                    <div class="footerItem">
+                        Latency: <span class="bitex-model" data-model-key="latency">0</span> ms
+                    </div>
                 </td>
                 <td>
-                    <a href="http://blinktrade.com/" target="_blank">© 2014 BlinkTrade Inc</a>
+                    <a href="http://blinktrade.com/" target="_blank">
+                        <div class="footerItem">
+                            © 2014 BlinkTrade Inc
+                        </div>
+                    </a>
                 </td>
                 <td>
-                    <a href="https://github.com/blinktrade/" target="_blank">Proudly 100% open source <span class="bitex-model" data-model-key="JSVersion"></span></a>
+                    <a href="https://github.com/blinktrade/" target="_blank">
+                        <div class="footerItem">
+                            Proudly 100% open source <span class="bitex-model" data-model-key="JSVersion"></span>
+                        </div>
+                    </a>
                 </td>
                 <td>
-                    Version: <%= deploy_version %>
+                    <div class="footerItem">
+                        Version: <%= deploy_version %>
+                    </div>
                 </td>
                 <td>
-                    <a href="http://nytm.org/made-in-nyc/" target="_blank">Made with <span style="color: #d11f0d;font-size: 19px;">♥</span> in NYC</a>
+                    <a href="http://nytm.org/made-in-nyc/" target="_blank">
+                        <div class="footerItem">
+                            Made with <span style="color: #d11f0d;font-size: 19px;">♥</span> in NYC
+                        </div>
+                    </a>
                 </td>
             </tr>
         </table>
           <% } %>
-      </div>
-      <div class="BlurFooter">
       </div>
     </footer>
     <% if (load_application) { %>
